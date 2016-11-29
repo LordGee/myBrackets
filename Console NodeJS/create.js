@@ -1,4 +1,10 @@
 const fs = require('fs');
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
 var loadEvent = () => {
   try {
@@ -41,7 +47,21 @@ var createEvent = (_en, _np) => {
     size: bracketSize
   };
   saveEvent(data);
+  playerEntry(_np);
 };
+
+var playerEntry = (_np) => {
+  var players = [_np];
+  for (var i = 0; i < _np.length; i++) {
+    rl.question(`Enter player ${i + 1}`, (player) => {
+      // TODO: Log the answer in a json file
+      players[i] = player;
+      console.log(`You entered: ${player}`);
+      sep();
+    });
+  }
+  rl.close();
+}
 
 module.exports = {
   createEvent

@@ -57,6 +57,7 @@ var _create = () => {
     rl.question('How many players do you have: ', (noPlayers) => {
       // TODO: Log the answer in a json file
       console.log(`You have choosen a ${noPlayers} player event`);
+      sep();
       rl.close();
       cr.createEvent(eventName, noPlayers);
     });
