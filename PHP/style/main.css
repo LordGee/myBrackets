@@ -2,8 +2,8 @@
     position: fixed;
     height: 100%;
     width: 250px;
-    left: 0;
-    background: green;
+    left: -250px;
+    background: RGBA(0,0,0,0.75);
     overflow: hidden;
     -moz-transition: left ease .4s;
     -o-transition: left ease .4s;
@@ -12,7 +12,7 @@
 }
 
 #sideBar.hide-sidebar {
-    left: -250px;
+    left: 0px;
     -moz-transition: left ease .4s;
     -o-transition: left ease .4s;
     -webkit-transition: left ease .4s;
@@ -20,11 +20,10 @@
 }
 
 #mainArea {
-    position: fixed;
+    width: 100%;
     margin: 0;
     top: 0;
-    width: 100%;
-    margin-left: 250px;
+    margin-left: 0;
     -moz-transition: margin-left ease .4s;
     -o-transition: margin-left ease .4s;
     -webkit-transition: margin-left ease .4s;
@@ -32,7 +31,7 @@
 }
 
 #mainArea.hide-sidebar {
-    margin-left: 0;
+    margin-left: 250px;
     -moz-transition: margin-left ease .4s;
     -o-transition: margin-left ease .4s;
     -webkit-transition: margin-left ease .4s;
@@ -42,48 +41,18 @@
 #headerArea {
     width: 100%;
     height: 200px;
-    background-color: darkseagreen;
+    background-color: RGBA(0,0,0,0.75);
 }
 
 #logoImage {
-    position: fixed;
+    position: absolute;
     right: 50px;
 }
 
-.button {
-    background-color: white;
-    border: black 3px solid;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    font-size: 22px;
-    width: 150px;
-    height: 50px;
-    border-radius: 10px;
-}
-
-.button:hover {
-    color: white;
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-}
-
 #menuButton {
-    left: 275px;
+    left: -42px;
     top: 75px;
     position: fixed;
-    -moz-transform: rotate(-360deg);
-    -ms-transform: rotate(-360deg);
-    -o-transform: rotate(-360deg);
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-    -moz-transition: left ease .4s, transform ease .8s;
-    -o-transition: left ease .4s, transform ease .8s;
-    -webkit-transition: left ease .4s, transform ease .8s;
-    transition: left ease .4s, transform ease .8s;
-}
-
-#menuButton.hide-sidebar {
-    left: -50px;
     -moz-transform: rotate(270deg);
     -ms-transform: rotate(270deg);
     -o-transform: rotate(270deg);
@@ -95,22 +64,54 @@
     transition: left ease .4s, transform ease .8s;
 }
 
+#menuButton.hide-sidebar {
+    left: 60px;
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    -moz-transition: left ease .4s, transform ease .8s;
+    -o-transition: left ease .4s, transform ease .8s;
+    -webkit-transition: left ease .4s, transform ease .8s;
+    transition: left ease .4s, transform ease .8s;
+}
+
+#mobileMenuButton {
+    background-color: RGBA(0,0,0,0.6);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: none;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
 nav {
-    text-align: center;
-    margin-top: 50px;
+    text-align: left;
+    margin-top: 200px;
+}
+
+#navItems {
+    padding-left: 25px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .navLink {
     display: block;
-    width: 95%;
+    width: 90%;
     font-size: 28px;
     font-weight: bold;
     color: black;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 20px;
     text-decoration: none;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+a.navLink {
+    color: white;
 }
 
 .navLink:hover {
@@ -118,4 +119,9 @@ nav {
     border-left: none;
     border-right: none;
     border-radius: 5px;
+}
+
+.navIcon {
+    float: right;
+    right: 5px;
 }

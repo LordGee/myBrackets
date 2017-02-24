@@ -1,7 +1,6 @@
-            <link href="style/footer.css" rel="stylesheet" type="text/css" />
-            <footer>
-                <p>this is a footer</p>
-            </footer>
         </div>
+
+        <script src="js/navigation.js" type="text/javascript"></script>
+
     </body>
 </html>

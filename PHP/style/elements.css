@@ -3,6 +3,7 @@
     padding: 0;
     width: 100%;
     height: 100%;
+    background-image: url(../image/grassRepeat.jpg);
 }
 
 h1, h2, h3, h4, h5, h6, input[type=button] {
@@ -15,7 +16,7 @@ h1 {
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: bold;
 }
 
@@ -24,12 +25,12 @@ h3 {
     font-weight: 800;
 }
 
-h4 {
+h4, label {
     font-size: 22px;
     font-weight: 600;
 }
 
-h5 {
+h5, input[type=email], input[type=password] {
     font-size: 18px;
     font-weight: 400;
 }
@@ -44,3 +45,60 @@ p, li, a, span {
     font-size: 16px;
 }
 
+button {
+    z-index: 5;
+}
+
+form {
+    text-align: left;
+}
+
+.inputIcon {
+    display: table-cell;
+    width: 30px;
+    vertical-align: middle;
+    background-color: #FFFCEB;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border: 2px grey solid;
+    border-right: none;
+}
+
+.inputWrap {
+    width: 100%;
+    display: table;
+}
+
+input[type=email], input[type=password], input[type=text] {
+    padding: 12px;
+    width: 90%;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border: 2px grey solid;
+    display: block;
+}
+
+input[type=submit], .button {
+    background-color: white;
+    border: black 3px solid;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    width: auto;
+    height: 50px;
+    border-radius: 10px;
+}
+
+input[type=submit]:hover, .button:hover {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+label {
+    margin: 30px;
+}

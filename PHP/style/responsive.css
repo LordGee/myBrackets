@@ -1,0 +1,71 @@
+@media screen and (max-width: 850px) {
+
+    h1 {
+        font-size: 32px;
+        font-weight: bolder;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    h4, label {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    h5, input[type=email], input[type=password] {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    h6 {
+        font-size: 14px;
+        font-weight: 200;
+    }
+
+    p, li, a, span {
+        font-size: 12px;
+    }
+
+    #logoImage {
+        width: 200px;
+        right: auto;
+        left: 25px;
+    }
+
+    #headerArea {
+        height: 100px;
+    }
+
+    #menuButton {
+        left: 65px;
+        top: 100px;
+        display: none;
+    }
+
+    #mobileMenuButton {
+        display: inline;
+        color: white;
+        position: fixed;
+        right: 15px;
+        top: 25px;
+    }
+
+    nav {
+        margin-top: 160px;
+    }
+
+    input[type=email], input[type=password], input[type=text] {
+        width: 90%;
+    }
+    .contentArea {
+        width: 95%;
+    }
+}

@@ -1,0 +1,63 @@
+#content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 1%;
+}
+
+#content h1 {
+    text-align: center;
+}
+
+.contentArea {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.result {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.error {
+    color: darkred;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.message {
+    color: darkblue;
+    font-weight: bolder;
+}
+
+.inputItem {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.eventPost {
+    width:100%;
+    min-width: 300px;
+    max-width: 640px;
+    border-radius: 5px;
+    border: 2px solid black;
+    float: left;
+    margin: 0.9%;
+    padding: 5px;
+}
+
+#postContain {
+    width:auto;
+    margin-left: auto;
+    margin-right: auto;
+}
