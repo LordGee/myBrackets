@@ -101,10 +101,130 @@
                             <span>15</span>
                         </div>
                     </div>
+                    <div class="game-1">
+                        <div class="player">
+                            <label for="player1">Player 1</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player2">Player 2</label>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <div class="game-1">
+                        <div class="player">
+                            <label for="player3">Player 3</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player4">Player 4</label>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <div class="game-1">
+                        <div class="player">
+                            <label for="player5">Player 5</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player6">Player 6</label>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <div class="game-1">
+                        <div class="player">
+                            <label for="player7">Player 7</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player8">Player 8</label>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <div class="game-1">
+                        <div class="player">
+                            <label for="player1">Player 1</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player2">Player 2</label>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <div class="game-1">
+                        <div class="player">
+                            <label for="player3">Player 3</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player4">Player 4</label>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <div class="game-1">
+                        <div class="player">
+                            <label for="player5">Player 5</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player6">Player 6</label>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <div class="game-1">
+                        <div class="player">
+                            <label for="player7">Player 7</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player8">Player 8</label>
+                            <span>15</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="round-2">
                     <h4>Round 2</h4>
                     <br>
+                    <div class="game-2">
+                        <div class="player">
+                            <label for="player1">Player 1</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player2">Player 2</label>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <div class="game-2">
+                        <div class="player">
+                            <label for="player3">Player 3</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player4">Player 4</label>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <div class="game-2">
+                        <div class="player">
+                            <label for="player1">Player 1</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player2">Player 2</label>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <div class="game-2">
+                        <div class="player">
+                            <label for="player3">Player 3</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player4">Player 4</label>
+                            <span>15</span>
+                        </div>
+                    </div>
                     <div class="game-2">
                         <div class="player">
                             <label for="player1">Player 1</label>
@@ -169,11 +289,55 @@
                             <span>15</span>
                         </div>
                     </div>
+                    <div class="game-3">
+                        <div class="player">
+                            <label for="player1">Player 1</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player2">Player 2</label>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <div class="game-3">
+                        <div class="player">
+                            <label for="player1">Player 1</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player2">Player 2</label>
+                            <span>15</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="round-4">
                     <h4>Round 4</h4>
                     <br>
                     <div class="game-4">
+                        <div class="player">
+                            <label for="player1">Player 1</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player2">Player 2</label>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <div class="game-4">
+                        <div class="player">
+                            <label for="player1">Player 1</label>
+                            <span>15</span>
+                        </div>
+                        <div class="player">
+                            <label for="player2">Player 2</label>
+                            <span>15</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="round-5">
+                    <h4>Round 5</h4>
+                    <br>
+                    <div class="game-5">
                         <div class="player">
                             <label for="player1">Player 1</label>
                             <span>15</span>

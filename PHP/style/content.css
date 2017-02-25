@@ -74,7 +74,70 @@
 
 .eventContainer {
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     white-space: nowrap;
     overflow: auto;
 }
 
+.eventContainer h4 {
+    text-align: center;
+}
+
+.eventContainer label {
+    font-size: 18px;
+}
+
+[class*="game-"] {
+    background-color: lightblue;
+    border: 1px black solid;
+    border-radius: 2px;
+}
+
+
+
+.game-1 {
+    margin-top: 1%;
+}
+
+.game-1:first-of-type {
+    margin-top: 0%;
+}
+
+.game-2 {
+    margin-top: 31%;
+}
+
+.game-2:first-of-type {
+    margin-top: 15%;
+}
+
+.game-3 {
+    margin-top: 91%;
+}
+
+.game-3:first-of-type {
+    margin-top: 44%;
+}
+
+.game-4 {
+    margin-top: 210%;
+}
+
+.game-4:first-of-type {
+    margin-top: 106%;
+}
+
+.game-5 {
+    margin-top: 252%;
+}
+
+.game-5:first-of-type {
+    margin-top: 225%;
+}
+
+.bracket {
+    fill: none;
+    stroke: black;
+    stroke-width: 2px;
+}
