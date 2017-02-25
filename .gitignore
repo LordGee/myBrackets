@@ -241,4 +241,5 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 
-.idea/
+.idea/*
+.idea/workspace.xml

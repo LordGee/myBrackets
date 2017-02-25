@@ -16,9 +16,10 @@
 <div id="sideBar">
     <nav>
         <div id="navItems">
-            <a class="navLink" href="index.php">Home <i class="fa fa-home navIcon" aria-hidden="true"></i></a>
-            <a class="navLink" href="signup.php">Sign-Up <i class="fa fa-user-plus navIcon" aria-hidden="true"></i></a>
-            <a class="navLink" href="signin.php">Login <i class="fa fa-sign-in navIcon" aria-hidden="true"></i></a>
+            <a class="navLink" href="index.php">Home<i class="fa fa-home navIcon" aria-hidden="true"></i></a>
+            <a class="navLink" href="signup.php">Sign-Up<i class="fa fa-user-plus navIcon" aria-hidden="true"></i></a>
+            <a class="navLink" href="signin.php">Login<i class="fa fa-sign-in navIcon" aria-hidden="true"></i></a>
+            <a class="navLink" href="event.php">Event Test<i class="fa fa-bars fa-spin navIcon" aria-hidden="true"></i></a>
         </div>
     </nav>
 </div>
