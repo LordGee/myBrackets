@@ -29,6 +29,10 @@ $options = array(
     $db = $m->selectDB($mdb_name);
 
     require_once ('db/db_create.php');
+    require_once ('db/db_read.php');
 
+    function scopeUserInput($_value) {
+
+    }
 
 ?>

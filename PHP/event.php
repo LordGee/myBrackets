@@ -1,3 +1,4 @@
+<?php require_once ('controllers/main_controller.php'); ?>
 <?php require_once ('include/header.php'); ?>
 
 <div id="content">
@@ -11,9 +12,11 @@
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6">
                 <h3>Details</h3>
-                <p>Start Date - 25/02/2017</p>
-                <p>Bracket Size - 32</p>
-                <p>Number of Players - 30</p>
+                <div class="centerText">
+                    <p>Start Date - 25/02/2017</p>
+                    <p>Bracket Size - 32</p>
+                    <p>Number of Players - 30</p>
+                </div>
             </div>
         </div>
         <div class="row">

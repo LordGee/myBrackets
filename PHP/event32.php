@@ -1,3 +1,4 @@
+<?php require_once ('controllers/main_controller.php'); ?>
 <?php require_once ('include/header.php'); ?>
 
 <div id="content">
@@ -5,15 +6,17 @@
         <h1>Event Test Page</h1>
         <div class="row">
             <h2>Event Name</h2>
-            <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="col-sm-12 col-offset-md-1 col-offset-lg-1 col-md-6 col-lg-6">
                 <h3>Description</h3>
                 <p>Description of the event which could be very long or it could be short however this is up to the administrator who is running the event...</p>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="col-sm-12 col-offset-md-1 col-offset-lg-1 col-md-4 col-lg-4">
                 <h3>Details</h3>
-                <p>Start Date - 25/02/2017</p>
-                <p>Bracket Size - 32</p>
-                <p>Number of Players - 30</p>
+                <div class="centerText">
+                    <p>Start Date - 25/02/2017</p>
+                    <p>Bracket Size - 32</p>
+                    <p>Number of Players - 30</p>
+                </div>
             </div>
         </div>
         <div class="row">

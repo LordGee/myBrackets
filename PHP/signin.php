@@ -1,9 +1,12 @@
-<?php require_once ('include/header.php'); ?>
+<?php require_once ('controllers/main_controller.php'); ?>
 <?php require_once ('controllers/user_controller.php'); ?>
+<?php require_once ('include/header.php'); ?>
+
 <?php
-//    echo '<pre>';
-//    var_dump($_POST);
-//    echo '</pre>';
+    echo '<pre>';
+    var_dump($user);
+    var_dump($_SESSION);
+    echo '</pre>';
 ?>
 
 

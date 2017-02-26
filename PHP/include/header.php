@@ -1,4 +1,3 @@
-<?php require_once ('controllers/main_controller.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,9 +16,14 @@
     <nav>
         <div id="navItems">
             <a class="navLink" href="index.php">Home<i class="fa fa-home navIcon" aria-hidden="true"></i></a>
-            <a class="navLink" href="signup.php">Sign-Up<i class="fa fa-user-plus navIcon" aria-hidden="true"></i></a>
-            <a class="navLink" href="signin.php">Login<i class="fa fa-sign-in navIcon" aria-hidden="true"></i></a>
-            <a class="navLink" href="event.php">Event Test<i class="fa fa-bars fa-spin navIcon" aria-hidden="true"></i></a>
+            <?php if (isset($_SESSION['user'])): ?>
+                <a class="navLink" href="create.php">Create<i class="fa fa-plus navIcon" aria-hidden="true"></i></a>
+                <a class="navLink" href="event.php">Event Test<i class="fa fa-bars fa-spin navIcon" aria-hidden="true"></i></a>
+                <a class="navLink" href="signout.php">Logout<i class="fa fa-sign-out navIcon" aria-hidden="true"></i></a>
+            <?php else: ?>
+                <a class="navLink" href="signin.php">Login<i class="fa fa-sign-in navIcon" aria-hidden="true"></i></a>
+                <a class="navLink" href="signup.php">Sign-Up<i class="fa fa-user-plus navIcon" aria-hidden="true"></i></a>
+            <?php endif; ?>
         </div>
     </nav>
 </div>

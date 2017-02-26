@@ -1,3 +1,4 @@
+<?php require_once ('controllers/main_controller.php'); ?>
 <?php require_once ('include/header.php'); ?>
 
     <div id="content">

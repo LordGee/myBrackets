@@ -75,7 +75,7 @@ form {
     display: table;
 }
 
-input[type=email], input[type=password], input[type=text] {
+input[type=email], input[type=password], input[type=text], textarea {
     padding: 12px;
     width: 90%;
     border-bottom-right-radius: 5px;
@@ -105,4 +105,7 @@ input[type=submit]:hover, .button:hover {
 
 label {
     margin: 30px;
+}
+.centerText {
+    text-align: center;
 }

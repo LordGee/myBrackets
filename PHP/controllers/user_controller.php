@@ -12,10 +12,23 @@
         if ($_POST['code'] == "registration"){
             if ($_POST['pass1'] === $_POST['pass2']) {
                 $encryptPw = encryptPassword($_POST['email'], $_POST['pass1']);
-                createNewUser($_POST['email'], $encryptPw);
-                $message = "Well Done";
+                $success = createNewUser($_POST['email'], $encryptPw);
+                if ($success) {
+                    $message = "Well Done, you have successfully registered";
+                } else {
+                    $error = "Your email address is already registered with us";
+                }
             } else {
                 $error = "Your passwords do not match, please try again.";
+            }
+        } elseif ($_POST['code'] == "login") {
+            $encryptPw = encryptPassword($_POST['email'], $_POST['pass']);
+            $user = loginUser($_POST['email'], $encryptPw);
+            if ($user) {
+                $_SESSION['user'] = $user['_id'];
+                $message = "Success!!!";
+            } else {
+                $error = "This user can not be found, please check your credentials and try again";
             }
         }
     }
