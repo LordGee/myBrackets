@@ -70,6 +70,10 @@ form {
     border-right: none;
 }
 
+.inputParticipant {
+    width: 40px;
+}
+
 .inputWrap {
     width: 100%;
     display: table;

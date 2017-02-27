@@ -244,3 +244,8 @@ ModelManifest.xml
 .idea/*
 .idea/workspace.xml
 .idea/workspace.xml
+PHP/.idea/modules.xml
+
+PHP/.idea/PHP.iml
+
+PHP/.idea/workspace.xml
