@@ -10,7 +10,7 @@ body {
     background-image: url(../image/grassRepeat.jpg);
 }
 
-h1, h2, h3, h4, h5, h6, input[type=button] {
+h1, h2, h3, h4, h5, h6, input[type=button], .button, input[type=email], input[type=password], input[type=text], textarea {
     font-family: 'Comfortaa', cursive;
 }
 
@@ -34,7 +34,7 @@ h4, label {
     font-weight: 600;
 }
 
-h5, input[type=email], input[type=password] {
+h5, input[type=email], input[type=password], input[type=text], textarea {
     font-size: 18px;
     font-weight: 400;
 }
@@ -71,7 +71,7 @@ form {
 }
 
 .inputParticipant {
-    width: 40px;
+    width: 60px;
 }
 
 .inputWrap {
@@ -90,7 +90,7 @@ input[type=email], input[type=password], input[type=text], textarea {
     display: block;
 }
 
-input[type=submit], .button {
+input[type=submit], button, .button {
     background-color: white;
     border: black 3px solid;
     color: black;
@@ -102,9 +102,15 @@ input[type=submit], .button {
     border-radius: 10px;
 }
 
+span.button {
+    padding:10px;
+    font-size: 18px;
+    width: auto;
+}
+
 input[type=submit]:hover, .button:hover {
     color: white;
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px darkgreen;
 }
 
 label {

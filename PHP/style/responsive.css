@@ -201,7 +201,7 @@
         font-weight: 600;
     }
 
-    h5, input[type=email], input[type=password] {
+    h5, input[type=email], input[type=password], input[type=text], textarea {
         font-size: 16px;
         font-weight: 400;
     }
@@ -212,7 +212,11 @@
     }
 
     p, li, a, span {
-        font-size: 12px;
+        font-size: 14px;
+    }
+
+    input[type=submit], .button {
+        font-size: 16px;
     }
 
     #logoImage {
@@ -243,10 +247,19 @@
         margin-top: 160px;
     }
 
-    input[type=email], input[type=password], input[type=text] {
-        width: 90%;
+    input[type=email], input[type=password], input[type=text], textarea {
+        width: 98%;
     }
+
+    .inputItem {
+        width: 98%;
+    }
+
+    #content {
+        width: 100%;
+    }
+
     .contentArea {
-        width: 95%;
+        width: 98%;
     }
 }
