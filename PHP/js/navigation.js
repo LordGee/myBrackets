@@ -1,5 +1,4 @@
-﻿﻿
-(function () {
+﻿﻿(function () {
     var $sidebarAndWrapper = $("#sideBar,#mainArea,#menuButton, #mobileMenuButton");
     $("#menuToggle").on("click",
         function () {

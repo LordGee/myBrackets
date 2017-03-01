@@ -13,4 +13,30 @@
         }
         return $paSalt;
     }
+
+    function bracketSizeRequire($_n) {
+        if ($_n < 2) {
+            return 0;
+        } elseif ($_n == 2) {
+            return 2;
+        } elseif ($_n > 2 && $_n <= 4) {
+            return 4;
+        } elseif ($_n > 4 && $_n <= 8) {
+            return 8;
+        } elseif ($_n > 8 && $_n <= 16) {
+            return 16;
+        } elseif ($_n > 16 && $_n <= 32) {
+            return 32;
+        } elseif ($_n > 32 && $_n <= 64) {
+            return 64;
+        } elseif ($_n > 64 && $_n <= 128) {
+            return 128;
+        } else {
+            return 0;
+        }
+    }
+
+    function generateBracket() {
+
+    }
 ?>
