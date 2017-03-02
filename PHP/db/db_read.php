@@ -21,4 +21,15 @@
         return $user;
     }
 
+    function getEventById($_id, $_user) {
+        global $db;
+        $e = $db->events;
+        $where = array('_id' => new MongoId($_id),
+            'administrator' => array('$elemMatch' => ['$id' => new MongoId($_user)]));
+        $select = array();
+//        var_dump($e->find($where));
+        $event = $e->findOne($where, $select);
+        return $event;
+    }
+
 ?>

@@ -140,3 +140,11 @@
     stroke: black;
     stroke-width: 2px;
 }
+
+.player {
+    width: auto;
+    text-align: left;
+
+}
+
+

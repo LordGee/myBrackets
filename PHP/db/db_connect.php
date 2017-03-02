@@ -31,8 +31,4 @@ $options = array(
     require_once ('db/db_create.php');
     require_once ('db/db_read.php');
 
-    function scopeUserInput($_value) {
-
-    }
-
 ?>
