@@ -47,8 +47,8 @@
                 "email1" => $_e1,
                 "player2" => $_p2,
                 "email2" => $_e2,
-                "score1" => null,
-                "score2" => null
+                "score1" => 0,
+                "score2" => 0
             )
         )
         );

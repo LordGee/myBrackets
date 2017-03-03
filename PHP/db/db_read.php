@@ -32,4 +32,25 @@
         return $event;
     }
 
+    function getAllEventsByUserId($_user) {
+        global $db;
+        $e = $db->events;
+        $where = array('administrator' => array('$elemMatch' => ['$id' => new MongoId($_user)]));
+        $select = array();
+        $event = $e->find($where, $select);
+        return $event;
+    }
+
+    function getGameByIdRoundAndGame($_id, $_r, $_g, $_user) {
+        global $db;
+        $e = $db->events;
+        $where = array('_id' => new MongoId($_id),
+            'administrator' => array('$elemMatch' => ['$id' => new MongoId($_user)]),
+            'games' => array('$elemMatch' => array('round' => $_r, 'game' => $_g))
+            );
+        $select = array();
+        $game = $e->findOne($where, $select);
+        return $game;
+    }
+
 ?>
