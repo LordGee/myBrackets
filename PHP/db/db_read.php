@@ -41,14 +41,12 @@
         return $event;
     }
 
-    function getGameByIdRoundAndGame($_id, $_r, $_g, $_user) {
+    function getGameByIdRoundAndGame($_id, $_r, $_g) {
         global $db;
         $e = $db->events;
-        $where = array('_id' => new MongoId($_id),
-            'administrator' => array('$elemMatch' => ['$id' => new MongoId($_user)]),
-            'games' => array('$elemMatch' => array('round' => $_r, 'game' => $_g))
-            );
-        $select = array();
+        $where = array('_id' => new MongoId($_id));
+        $select = array('games' => array(
+            '$elemMatch' => ['round' => (int)$_r, 'game' => (int)$_g]));
         $game = $e->findOne($where, $select);
         return $game;
     }

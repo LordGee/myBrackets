@@ -13,16 +13,31 @@
         <div class="contentArea">
             <div class="row">
                 <?php if (isset($_GET['r']) && isset($_GET['g'])): ?>
-                    <h2></h2>
-
-                    <?php
-                        echo '<pre>';
-                        var_dump($game);
-//                        foreach ($game as $g) {
-//                            var_dump($g);
-//                        }
-                        echo '</pre>';
-                    ?>
+                    <h2><?= $game['games'][0]['round_name'] ?> <?= $game['games'][0]['round'] ?> - Game <?= $game['games'][0]['game'] ?></h2>
+                    <h3><?= $game['games'][0]['player1'] ?> VS <?= $game['games'][0]['player2'] ?></h3>
+                    <form method="post" action="admin_event.php">
+                        <div class="inputItem">
+                            <label for="score1"><?= $game['games'][0]['player1'] ?> : </label>
+                            <div class="inputWrap">
+                                <span class="inputIcon"><i class="fa fa-user fa-fw fa-lg" aria-hidden="true"></i></span>
+                                <input type="number" name="score1" min="0" max="99" step="1" value="<?= $game['games'][0]['score1'] ?>">
+                            </div>
+                        </div>
+                        <div class="inputItem">
+                            <label for="score2"><?= $game['games'][0]['player2'] ?> : </label>
+                            <div class="inputWrap">
+                                <span class="inputIcon"><i class="fa fa-user fa-fw fa-lg" aria-hidden="true"></i></span>
+                                <input type="number" name="score2" min="0" max="99" step="1" value="<?= $game['games'][0]['score2'] ?>">
+                            </div>
+                        </div>
+                        <div class="inputItem">
+                            <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
+                            <input type="hidden" name="gid" value="<?= $game['games'][0]['id'] ?>">
+                            <input type="hidden" name="code" value="updateScore">
+                            <input type="submit" value="Update Score">
+                            <a href="admin_event.php?id=<?= $_GET['id'] ?>"><button type="button" value="Cancel">Cancel</button></a>
+                        </div>
+                    </form>
 
                 <?php elseif (isset($_GET['id'])): ?>
                 <h2><?= $event['event_name'] ?></h2>

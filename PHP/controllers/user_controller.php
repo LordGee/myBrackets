@@ -12,7 +12,7 @@
         if ($_POST['code'] == "registration"){
             if ($_POST['pass1'] === $_POST['pass2']) {
                 $encryptPw = encryptPassword($_POST['email'], $_POST['pass1']);
-                $success = createNewUser($_POST['email'], $encryptPw);
+                $success = createNewUser($_POST['email'], $encryptPw, $_POST['name']);
                 if ($success) {
                     $message = "Well Done, you have successfully registered";
                 } else {

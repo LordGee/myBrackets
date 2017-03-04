@@ -10,7 +10,7 @@ body {
     background-image: url(../image/grassRepeat.jpg);
 }
 
-h1, h2, h3, h4, h5, h6, input[type=button], .button, input[type=email], input[type=password], input[type=text], select, th, label {
+h1, h2, h3, h4, h5, h6, input[type=button], .button, input[type=email], input[type=password], input[type=text], input[type=number], select, th, label {
     font-family: 'Comfortaa', cursive;
 }
 
@@ -34,7 +34,7 @@ h4, label, textarea, th {
     font-weight: 600;
 }
 
-h5, input[type=email], input[type=password], input[type=text], textarea, option, select, th {
+h5, input[type=email], input[type=password], input[type=text], input[type=number], textarea, option, select, th {
     font-size: 18px;
     font-weight: 400;
 }
@@ -79,7 +79,7 @@ form {
     display: table;
 }
 
-input[type=email], input[type=password], input[type=text], textarea {
+input[type=email], input[type=password], input[type=text], input[type=number], textarea {
     padding: 12px;
     width: 100%;
     border-bottom-right-radius: 5px;

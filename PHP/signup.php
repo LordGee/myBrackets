@@ -22,7 +22,7 @@
                     <label for="name">Your Name : </label>
                     <div class="inputWrap">
                         <span class="inputIcon"><i class="fa fa-user fa-fw fa-lg" aria-hidden="true"></i></span>
-                        <input type="name" name="name" placeholder="Enter your name" required>
+                        <input type="text" name="name" placeholder="Enter your name" required>
                     </div>
                 </div>
                 <div class="inputItem">

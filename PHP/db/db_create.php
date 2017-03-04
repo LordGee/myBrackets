@@ -1,11 +1,12 @@
 <?php
-    function createNewUser($_e, $_p) {
+    function createNewUser($_e, $_p, $_n) {
         global $db;
         $check = checkIfEmailExists($_e);
         if (!$check) {
             $user = $db->users;
             $user->insert(
                 [
+                    "name" => $_n,
                     "email" => $_e,
                     "pw" => $_p
                 ]
@@ -40,6 +41,7 @@
         $event = $db->events;
         $newGame = array('$push' => array(
             "games" => array(
+                "id" => new MongoId(),
                 "round" => $_r,
                 "round_name" => $_m,
                 "game" => $_g,

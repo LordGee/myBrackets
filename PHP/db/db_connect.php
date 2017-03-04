@@ -30,5 +30,6 @@ $options = array(
 
     require_once ('db/db_create.php');
     require_once ('db/db_read.php');
+    require_once ('db/db_update.php');
 
 ?>
