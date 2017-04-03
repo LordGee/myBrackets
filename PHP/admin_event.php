@@ -75,6 +75,7 @@
                 </div>
 
                 <?php else: ?>
+                    <h2>Manage your events here</h2>
                     <table>
                         <tr>
                             <th>Event Name</th>
@@ -83,7 +84,6 @@
                             <th>Edit</th>
                         </tr>
                     <?php foreach ($events as $ev): ?>
-                        <h2>Manage your events here</h2>
                                     <tr>
                                         <td><?= $ev['event_name'] ?></td>
                                         <td><?= $ev['bracket_size'] ?></td>

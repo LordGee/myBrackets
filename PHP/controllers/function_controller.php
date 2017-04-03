@@ -84,16 +84,16 @@
             $_g = $_g / 2;
             for ($g = 0; $g < $_g; $g++) {
                 if ($r + 1 == 1) {
-                    addGameNewEvent($_id, $r + 1, $g + 1, $_n[$p], $_n[$p + 1], $_e[$p], $_e[$p + 1], "Round");
+                    $eventObject->addGameNewEvent($_id, $r + 1, $g + 1, $_n[$p], $_n[$p + 1], $_e[$p], $_e[$p + 1], "Round");
                     $p += 2;
                 } elseif ($_r - $r == 1) {
-                    addGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Final");
+                    $eventObject->addGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Final");
                 } elseif ($_r - $r == 2) {
-                    addGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Semi-Final");
+                    $eventObject->addGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Semi-Final");
                 } elseif ($_r - $r == 2) {
-                    addGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Quarter-Final");
+                    $eventObject->addGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Quarter-Final");
                 } else {
-                    addGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Round");
+                    $eventObject->addGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Round");
                 }
             }
         }

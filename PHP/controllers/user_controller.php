@@ -12,7 +12,7 @@
         if ($_POST['code'] == "registration"){
             if ($_POST['pass1'] === $_POST['pass2']) {
                 $encryptPw = encryptPassword($_POST['email'], $_POST['pass1']);
-                $success = createNewUser($_POST['email'], $encryptPw, $_POST['name']);
+                $success = $userObject->createNewUser($_POST['email'], $encryptPw, $_POST['name']);
                 if ($success) {
                     $message = "Well Done, you have successfully registered";
                 } else {
@@ -23,7 +23,7 @@
             }
         } elseif ($_POST['code'] == "login") {
             $encryptPw = encryptPassword($_POST['email'], $_POST['pass']);
-            $user = loginUser($_POST['email'], $encryptPw);
+            $user = $userObject->loginUser($_POST['email'], $encryptPw);
             if ($user) {
                 $_SESSION['user'] = $user['_id'];
                 $message = "Success!!!";
