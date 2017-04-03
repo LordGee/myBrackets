@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb290597-919c-4510-ac90-dfcf1b58da84" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/PHP/db/db_read.php" afterPath="$PROJECT_DIR$/PHP/db/db_crud.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/myBrackets.iml" afterPath="$PROJECT_DIR$/.idea/myBrackets.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/admin_event.php" afterPath="$PROJECT_DIR$/PHP/admin_event.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/controllers/admin_event_controller.php" afterPath="$PROJECT_DIR$/PHP/controllers/admin_event_controller.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/controllers/create_controller.php" afterPath="$PROJECT_DIR$/PHP/controllers/create_controller.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/controllers/function_controller.php" afterPath="$PROJECT_DIR$/PHP/controllers/function_controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/controllers/user_controller.php" afterPath="$PROJECT_DIR$/PHP/controllers/user_controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/db/db_connect.php" afterPath="$PROJECT_DIR$/PHP/db/db_connect.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/db/db_create.php" afterPath="$PROJECT_DIR$/PHP/db/db_create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/db/db_update.php" afterPath="$PROJECT_DIR$/PHP/db/db_update.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/create.php" afterPath="$PROJECT_DIR$/PHP/create.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,40 +40,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db_create.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/db/db_create.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1830">
-              <caret line="61" column="7" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="61" selection-end-column="7" />
-              <folding>
-                <element signature="e#6#51#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db_connect.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/db/db_connect.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="32" column="30" lean-forward="false" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-              <folding>
-                <element signature="e#69#99#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/controllers/user_controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main_controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/controllers/main_controller.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -91,21 +50,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_controller.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="create_controller.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PHP/controllers/create_controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            <state relative-caret-position="1170">
+              <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="function_controller.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="function_controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/controllers/function_controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="66" column="19" lean-forward="true" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
+            <state relative-caret-position="1397">
+              <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PHP/create.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -159,7 +128,6 @@
         <option value="$PROJECT_DIR$/PHP/js/navigation.js" />
         <option value="$PROJECT_DIR$/PHP/template.php" />
         <option value="$PROJECT_DIR$/PHP/js/manageMultipleIdenticalComboBoxes.js" />
-        <option value="$PROJECT_DIR$/PHP/create.php" />
         <option value="$PROJECT_DIR$/PHP/include/header.php" />
         <option value="$PROJECT_DIR$/PHP/style/content.css" />
         <option value="$PROJECT_DIR$/PHP/signup.php" />
@@ -170,10 +138,11 @@
         <option value="$PROJECT_DIR$/PHP/db/db_create.php" />
         <option value="$PROJECT_DIR$/PHP/db/db_connect.php" />
         <option value="$PROJECT_DIR$/PHP/controllers/user_controller.php" />
-        <option value="$PROJECT_DIR$/PHP/controllers/function_controller.php" />
-        <option value="$PROJECT_DIR$/PHP/controllers/create_controller.php" />
         <option value="$PROJECT_DIR$/PHP/controllers/admin_event_controller.php" />
         <option value="$PROJECT_DIR$/PHP/admin_event.php" />
+        <option value="$PROJECT_DIR$/PHP/create.php" />
+        <option value="$PROJECT_DIR$/PHP/controllers/function_controller.php" />
+        <option value="$PROJECT_DIR$/PHP/controllers/create_controller.php" />
       </list>
     </option>
   </component>
@@ -489,12 +458,12 @@
       <workItem from="1488449868732" duration="24076000" />
       <workItem from="1488530481900" duration="10645000" />
       <workItem from="1488625679169" duration="11057000" />
-      <workItem from="1491216939166" duration="5421000" />
+      <workItem from="1491216939166" duration="10160000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163715000" />
+    <option name="totallyTimeSpent" value="168454000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="0" width="1940" height="2110" extended-state="0" />
@@ -535,7 +504,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#6#51#0#PHP" expanded="true" />
+            <element signature="e#6#51#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -754,14 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="70" column="133" lean-forward="true" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="133" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP/style/elements.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2835">
@@ -811,16 +772,8 @@
         <state relative-caret-position="450">
           <caret line="15" column="7" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="15" selection-end-column="7" />
           <folding>
-            <element signature="e#7#76#0#PHP" expanded="true" />
+            <element signature="e#7#76#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/db/db_crud.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1178">
-          <caret line="151" column="25" lean-forward="false" selection-start-line="151" selection-start-column="25" selection-end-line="151" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,7 +782,7 @@
         <state relative-caret-position="1830">
           <caret line="61" column="7" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="61" selection-end-column="7" />
           <folding>
-            <element signature="e#6#51#0#PHP" expanded="true" />
+            <element signature="e#6#51#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -838,6 +791,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/controllers/admin_event_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -860,22 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/controllers/create_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/controllers/admin_event_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP/admin_event.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -884,10 +829,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/db/db_crud.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1178">
+          <caret line="151" column="25" lean-forward="false" selection-start-line="151" selection-start-column="25" selection-end-line="151" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PHP/controllers/function_controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="66" column="19" lean-forward="true" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
+        <state relative-caret-position="1397">
+          <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/controllers/create_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
           <folding />
         </state>
       </provider>

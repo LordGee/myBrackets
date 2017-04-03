@@ -1,4 +1,5 @@
 <?php
+
     function encryptPassword($_e, $_p) {
         $count = strlen($_e);
         $use = ($count / 2) + 2;
@@ -58,42 +59,37 @@
 
     function changePlayerOrder($_o, $_n) {
         for ($i = 0; $i < count($_o); $i++) {
-            if ($i != $_o[$i]) {
                 $temp = $_n[$_o[$i]];
-                $_n[$_o[$i]] = $_n[$i];
-                $_n[$i] = $temp;
-            }
+                $ordered[$i] = $temp;
         }
-        return $_n;
+        return $ordered;
     }
 
     function changeEmailOrder($_o, $_e) {
         for ($i = 0; $i < count($_o); $i++) {
-            if ($i != $_o[$i]) {
                 $temp = $_e[$_o[$i]];
-                $_e[$_o[$i]] = $_e[$i];
-                $_e[$i] = $temp;
-            }
+                $ordered[$i] = $temp;
         }
-        return $_e;
+        return $ordered;
     }
 
     function generateGames($_g, $_r, $_n, $_e, $_id) {
+        global $eventObject;
         for ($r = 0; $r < $_r; $r++) {
             $p = 0;
             $_g = $_g / 2;
             for ($g = 0; $g < $_g; $g++) {
                 if ($r + 1 == 1) {
-                    $eventObject->addGameNewEvent($_id, $r + 1, $g + 1, $_n[$p], $_n[$p + 1], $_e[$p], $_e[$p + 1], "Round");
+                    $eventObject->updateGameNewEvent($_id, $r + 1, $g + 1, $_n[$p], $_n[$p + 1], $_e[$p], $_e[$p + 1], "Round");
                     $p += 2;
                 } elseif ($_r - $r == 1) {
-                    $eventObject->addGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Final");
+                    $eventObject->updateGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Final");
                 } elseif ($_r - $r == 2) {
-                    $eventObject->addGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Semi-Final");
+                    $eventObject->updateGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Semi-Final");
                 } elseif ($_r - $r == 2) {
-                    $eventObject->addGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Quarter-Final");
+                    $eventObject->updateGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Quarter-Final");
                 } else {
-                    $eventObject->addGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Round");
+                    $eventObject->updateGameNewEvent($_id, $r + 1, $g + 1, "", "", "", "", "Round");
                 }
             }
         }
