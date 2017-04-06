@@ -32,7 +32,7 @@
         }
 
         public function updateUpdate($_d, $_w, $_u) {
-            $_d->update($_w, $_u);
+            $_d->findAndModify($_w, $_u);
         }
     }
 
@@ -153,11 +153,10 @@
             return $game;
         }
 
-        public function updateWinnerToNextRound($_id, $_r, $_g, $_p1 = null, $_p2 = null) {
+        public function updateWinnerToNextRound($_id, $_ngId, $_p1 = null, $_p2 = null) {
             $d = $this->db->events;
             $w = array('_id' => new MongoId($_id),
-                'games.game' => $_g,
-                'games.round' => $_r);
+                'games.id' => new MongoId($_ngId));
             if ($_p1 != null) {
                 $u = array(
                     '$set' => array(

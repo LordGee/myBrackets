@@ -116,6 +116,13 @@
             $nextGameNumber = ($_g + 1) / 2;
             $nextPosition = 1;
         }
+        $games = $eventObject->getGameByIdRoundAndGame($_POST['id'], $_POST['gid']);
+        $nextGameId = null;
+        for ($g = 0; $g < count($games); $g++) {
+            if ($games['games'][$g]['round'] == $nextRound && $games['games'][$g]['game'] == $nextGameNumber) {
+                $nextGameId = $games['games'][$g]['id'];
+            }
+        }
         if ($_s1 > $_s2) {
             // winner is player one
             if ($nextPosition == 2) {
@@ -124,7 +131,7 @@
             } else {
                 $_p2 = null;
             }
-            $eventObject->updateWinnerToNextRound($_id, $nextRound, $nextGameNumber, $_p1, $_p2);
+            $eventObject->updateWinnerToNextRound($_id, $nextGameId, $_p1, $_p2);
         } elseif ($_s2 > $_s1) {
             // winner is player two
             if ($nextPosition == 2) {
@@ -133,7 +140,7 @@
                 $_p1 = $_p2;
                 $_p2 = null;
             }
-            $eventObject->updateWinnerToNextRound($_id, $nextRound, $nextGameNumber, $_p1, $_p2);
+            $eventObject->updateWinnerToNextRound($_id, $nextGameId, $_p1, $_p2);
         }
     }
 ?>
