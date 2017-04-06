@@ -3,10 +3,10 @@
 <?php require_once ('include/header.php'); ?>
 
 <?php
-    echo '<pre>';
-    var_dump($_SESSION);
-    var_dump($_POST);
-    echo '</pre>';
+//    echo '<pre>';
+//    var_dump($_SESSION);
+//    var_dump($_POST);
+//    echo '</pre>';
 ?>
 
 

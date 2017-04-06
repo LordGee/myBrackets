@@ -36,6 +36,7 @@ if (isset($_POST['code'])) {
         $_SESSION['e_emailSorted'] = changeEmailOrder($_POST['e_order'], $_SESSION['e_email']);
         $_SESSION['e_id'] = $eventObject->createNewEvent($_SESSION['e_name'], $_SESSION['e_description'], $_SESSION['e_pcount'], $_SESSION['e_bsize'], $_SESSION['e_nrounds'], $_SESSION['user']);
         generateGames($_SESSION['e_bsize'], $_SESSION['e_nrounds'], $_SESSION['e_pnameSorted'], $_SESSION['e_emailSorted'], $_SESSION['e_id']);
+        updateNewBracket($_SESSION['e_id']);
         cleanup();
         header("location: admin_event.php?id={$_SESSION['e_id']}");
     }

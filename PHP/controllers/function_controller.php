@@ -104,7 +104,18 @@
         $_SESSION['e_id'] = $tempEid;
     }
 
-    function moveWinner($_id, $_gId, $_r, $_g, $_p1, $_s1, $_p2, $_s2) {
+    function updateNewBracket($_id) {
+        global $eventObject;
+        $event = $eventObject->getEventById($_id, $_SESSION['user']);
+        for ($i = 0; $i < count($event['games']); $i++) {
+            if ($event['games'][$i]['score1'] > 0 || $event['games'][$i]['score2'] > 0) {
+                moveWinner($_id, $event['games'][$i]['id'], $event['games'][$i]['round'], $event['games'][$i]['game'], $event['games'][$i]['player1'], $event['games'][$i]['score1'], $event['games'][$i]['player2'], $event['games'][$i]['score2']);
+            }
+        }
+        return $event;
+    }
+
+    function moveWinner($_id, $_gid, $_r, $_g, $_p1, $_s1, $_p2, $_s2) {
         global $eventObject;
         $nextGameNumber = null;
         $nextPosition = null;
@@ -116,15 +127,14 @@
             $nextGameNumber = ($_g + 1) / 2;
             $nextPosition = 1;
         }
-        $games = $eventObject->getGameByIdRoundAndGame($_POST['id'], $_POST['gid']);
+        $games = $eventObject->getGameByIdRoundAndGame($_id, $_gid);
         $nextGameId = null;
-        for ($g = 0; $g < count($games); $g++) {
+        for ($g = 0; $g < count($games['games']); $g++) {
             if ($games['games'][$g]['round'] == $nextRound && $games['games'][$g]['game'] == $nextGameNumber) {
                 $nextGameId = $games['games'][$g]['id'];
             }
         }
         if ($_s1 > $_s2) {
-            // winner is player one
             if ($nextPosition == 2) {
                 $_p2 = $_p1;
                 $_p1 = null;
@@ -133,7 +143,6 @@
             }
             $eventObject->updateWinnerToNextRound($_id, $nextGameId, $_p1, $_p2);
         } elseif ($_s2 > $_s1) {
-            // winner is player two
             if ($nextPosition == 2) {
                 $_p1 = null;
             } else {

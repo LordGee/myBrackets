@@ -23,7 +23,6 @@
             if ($eventObject->getEventById($_POST['id'], $_SESSION['user'])) {
                 $update = $eventObject->updateScoreByIdRoundAndGame($_POST['id'], $_POST['gid'], $_POST['score1'], $_POST['score2']);
                 if ($_POST['round_name'] != "Final"){
-                    // Move winners
                     moveWinner($_POST['id'], $_POST['gid'], $_POST['round'], $_POST['game'], $_POST['player1'], $_POST['score1'], $_POST['player2'], $_POST['score2']);
                 }
             }

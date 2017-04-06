@@ -113,13 +113,18 @@
             $d = $this->db->events;
             $w = array('_id' => new MongoId($_id),
                 'games.id' => new MongoId($_gid));
-//            $s = array('games' => array(
-//                '$elemMatch' => ['round' => (int)$_r, 'game' => (int)$_g]));
             $result = $this->readFindOne($d, $w);
             return $result;
         }
 
         public function updateGameNewEvent($_id, $_r, $_g, $_p1, $_p2, $_e1, $_e2, $_m) {
+            $s1 = 0;
+            $s2 = 0;
+            if ($_p1 == "BYE") {
+                $s2 = 1;
+            } elseif ($_p2 == "BYE") {
+                $s1 = 1;
+            }
             $d = $this->db->events;
             $u = array('$push' => array(
                 "games" => array(
@@ -131,8 +136,8 @@
                     "email1" => $_e1,
                     "player2" => $_p2,
                     "email2" => $_e2,
-                    "score1" => 0,
-                    "score2" => 0
+                    "score1" => $s1,
+                    "score2" => $s2
                 )
             ));
             $w = array("_id" => $_id);
@@ -177,120 +182,5 @@
         }
 
     }
-
-
-
-//function createNewUser($_e, $_p, $_n) {
-//    global $db;
-//    $check = checkIfEmailExists($_e);
-//    if (!$check) {
-//        $user = $db->users;
-//        $user->insert(
-//            [
-//                "name" => $_n,
-//                "email" => $_e,
-//                "pw" => $_p
-//            ]
-//        );
-//        return true;
-//    } else {
-//        return false;
-//    }
-//}
-
-//function createNewEvent($_name, $_description, $_players, $_size, $_rounds, $_admin) {
-//    global $db;
-//    $event = $db->events;
-//    $ref = $db->createDBRef('users', $_admin);
-//    $newEvent = array(
-//        "event_name" => $_name,
-//        "event_description" => $_description,
-//        "no_player" => $_players,
-//        "bracket_size" => $_size,
-//        "no_rounds" => $_rounds,
-//        "last_update" => date("Y-m-d H:i:s"),
-//        "administrator" => [
-//            $ref
-//        ]
-//    );
-//    $event->insert($newEvent);
-//    return $newEvent['_id'];
-//}
-
-//function addGameNewEvent($_id, $_r, $_g, $_p1, $_p2, $_e1, $_e2, $_m) {
-//    global $db;
-//    $event = $db->events;
-//    $newGame = array('$push' => array(
-//        "games" => array(
-//            "id" => new MongoId(),
-//            "round" => $_r,
-//            "round_name" => $_m,
-//            "game" => $_g,
-//            "player1" => $_p1,
-//            "email1" => $_e1,
-//            "player2" => $_p2,
-//            "email2" => $_e2,
-//            "score1" => 0,
-//            "score2" => 0
-//        )
-//    )
-//    );
-//    $where = array(
-//        "_id" => $_id
-//    );
-////        var_dump($newGame);
-//    $event->update($where, $newGame);
-//}
-
-//    function checkIfEmailExists($_e) {
-//        global $db;
-//        $users = $db->users;
-//        $where = array('email' => $_e);
-//        $user = $users->findOne($where);
-//        if ($user != null) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
-
-//    function loginUser($_e, $_p) {
-//        global $db;
-//        $users = $db->users;
-//        $where = array('email' => $_e, 'pw' => $_p);
-//        $select = array('_id');
-//        $user = $users->findOne($where, $select);
-//        return $user;
-//    }
-
-//    function getEventById($_id, $_user) {
-//        global $db;
-//        $e = $db->events;
-//        $where = array('_id' => new MongoId($_id),
-//            'administrator' => array('$elemMatch' => ['$id' => new MongoId($_user)]));
-//        $select = array();
-////        var_dump($e->find($where));
-//        $event = $e->findOne($where, $select);
-//        return $event;
-//    }
-
-//    function getAllEventsByUserId($_user) {
-//        global $db;
-//        $e = $db->events;
-//        $where = array('administrator' => array('$elemMatch' => ['$id' => new MongoId($_user)]));
-//        $select = array();
-//        $event = $e->find($where, $select);
-//        return $event;
-//    }
-
-//    function getGameByIdRoundAndGame($_id, $_r, $_g) {
-//        global $db;
-//        $e = $db->events;
-//        $where = array('_id' => new MongoId($_id));
-//        $select = array('games' => array(
-//            '$elemMatch' => ['round' => (int)$_r, 'game' => (int)$_g]));
-//        $game = $e->findOne($where, $select);
-//        return $game;
-//    }
 
 ?>
