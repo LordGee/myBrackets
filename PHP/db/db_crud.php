@@ -14,7 +14,7 @@
         }
 
         public function readFindOne($_d, $_w, $_s = null) {
-            if ($_s != null) {
+            if ($_s == null) {
                 $result = $_d->findOne($_w);
             } else {
                 $result = $_d->findOne($_w, $_s);
@@ -23,7 +23,7 @@
         }
 
         public function readFind($_d, $_w, $_s = null) {
-            if ($_s != null) {
+            if ($_s == null) {
                 $result = $_d->find($_w);
             } else {
                 $result = $_d->find($_w, $_s);
@@ -109,16 +109,17 @@
             return $result;
         }
 
-        function getGameByIdRoundAndGame($_id, $_r, $_g) {
+        public function getGameByIdRoundAndGame($_id, $_gid) {
             $d = $this->db->events;
-            $w = array('_id' => new MongoId($_id));
-            $s = array('games' => array(
-                '$elemMatch' => ['round' => (int)$_r, 'game' => (int)$_g]));
-            $result = $this->readFindOne($d, $w, $s);
+            $w = array('_id' => new MongoId($_id),
+                'games.id' => new MongoId($_gid));
+//            $s = array('games' => array(
+//                '$elemMatch' => ['round' => (int)$_r, 'game' => (int)$_g]));
+            $result = $this->readFindOne($d, $w);
             return $result;
         }
 
-        function updateGameNewEvent($_id, $_r, $_g, $_p1, $_p2, $_e1, $_e2, $_m) {
+        public function updateGameNewEvent($_id, $_r, $_g, $_p1, $_p2, $_e1, $_e2, $_m) {
             $d = $this->db->events;
             $u = array('$push' => array(
                 "games" => array(
@@ -138,7 +139,7 @@
             $this->updateUpdate($d, $w, $u);
         }
 
-        function updateScoreByIdRoundAndGame($_id, $_gid, $_s1, $_s2) {
+        public function updateScoreByIdRoundAndGame($_id, $_gid, $_s1, $_s2) {
             $d = $this->db->events;
             $w = array('_id' => new MongoId($_id),
                 'games.id' => new MongoId($_gid));
@@ -148,6 +149,30 @@
                     'games.$.score2' => (int)$_s2
                 )
             );
+            $game = $this->updateUpdate($d, $w, $u);
+            return $game;
+        }
+
+        public function updateWinnerToNextRound($_id, $_r, $_g, $_p1 = null, $_p2 = null) {
+            $d = $this->db->events;
+            $w = array('_id' => new MongoId($_id),
+                'games.game' => $_g,
+                'games.round' => $_r);
+            if ($_p1 != null) {
+                $u = array(
+                    '$set' => array(
+                        'games.$.player1' => $_p1
+                    )
+                );
+            } elseif ($_p2 != null) {
+                $u = array(
+                    '$set' => array(
+                        'games.$.player2' => $_p2
+                    )
+                );
+            } else {
+                return false;
+            }
             $game = $this->updateUpdate($d, $w, $u);
             return $game;
         }

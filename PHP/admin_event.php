@@ -4,7 +4,7 @@
 
 <?php
 //echo '<pre>';
-//var_dump($event);
+//var_dump($game);
 //echo '</pre>';
 ?>
 
@@ -13,26 +13,31 @@
         <div class="contentArea">
             <div class="row">
                 <?php if (isset($_GET['r']) && isset($_GET['g'])): ?>
-                    <h2><?= $game['games'][0]['round_name'] ?> <?= $game['games'][0]['round'] ?> - Game <?= $game['games'][0]['game'] ?></h2>
-                    <h3><?= $game['games'][0]['player1'] ?> VS <?= $game['games'][0]['player2'] ?></h3>
+                    <h2><?= $game['round_name'] ?> <?= $game['round'] ?> - Game <?= $game['game'] ?></h2>
+                    <h3><?= $game['player1'] ?> VS <?= $game['player2'] ?></h3>
                     <form method="post" action="admin_event.php">
                         <div class="inputItem">
-                            <label for="score1"><?= $game['games'][0]['player1'] ?> : </label>
+                            <label for="score1"><?= $game['player1'] ?> : </label>
+                            <input type="hidden" name="player1" value="<?= $game['player1'] ?>">
                             <div class="inputWrap">
                                 <span class="inputIcon"><i class="fa fa-user fa-fw fa-lg" aria-hidden="true"></i></span>
-                                <input type="number" name="score1" min="0" max="99" step="1" value="<?= $game['games'][0]['score1'] ?>">
+                                <input type="number" name="score1" min="0" max="99" step="1" value="<?= $game['score1'] ?>">
                             </div>
                         </div>
                         <div class="inputItem">
-                            <label for="score2"><?= $game['games'][0]['player2'] ?> : </label>
+                            <label for="score2"><?= $game['player2'] ?> : </label>
+                            <input type="hidden" name="player2" value="<?= $game['player2'] ?>">
                             <div class="inputWrap">
                                 <span class="inputIcon"><i class="fa fa-user fa-fw fa-lg" aria-hidden="true"></i></span>
-                                <input type="number" name="score2" min="0" max="99" step="1" value="<?= $game['games'][0]['score2'] ?>">
+                                <input type="number" name="score2" min="0" max="99" step="1" value="<?= $game['score2'] ?>">
                             </div>
                         </div>
                         <div class="inputItem">
                             <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
-                            <input type="hidden" name="gid" value="<?= $game['games'][0]['id'] ?>">
+                            <input type="hidden" name="gid" value="<?= $game['id'] ?>">
+                            <input type="hidden" name="round" value="<?= $game['round'] ?>">
+                            <input type="hidden" name="round_name" value="<?= $game['round_name'] ?>">
+                            <input type="hidden" name="game" value="<?= $game['game'] ?>">
                             <input type="hidden" name="code" value="updateScore">
                             <input type="submit" value="Update Score">
                             <a href="admin_event.php?id=<?= $_GET['id'] ?>"><button type="button" value="Cancel">Cancel</button></a>
@@ -64,6 +69,7 @@
                                             <input type="hidden" name="id" value="<?= $event['_id'] ?>">
                                             <input type="hidden" name="r" value="<?= $event['games'][$pos]['round'] ?>">
                                             <input type="hidden" name="g" value="<?= $event['games'][$pos]['game'] ?>">
+                                            <input type="hidden" name="gid" value="<?= $event['games'][$pos]['id'] ?>">
                                             <button type="submit" ><i class="fa fa-pencil-square-o " aria-hidden="true"></i> Edit</button>
                                         </form>
                                     </div>

@@ -10,12 +10,22 @@
 
     if (isset($_SESSION['user'])) {
         if (isset($_GET['r']) && isset($_GET['g'])) {
-            $game = $eventObject->getGameByIdRoundAndGame($_GET['id'], $_GET['r'], $_GET['g']);
+            $games = $eventObject->getGameByIdRoundAndGame($_GET['id'], $_GET['gid']);
+            $game = [];
+            for ($g = 0; $g < count($games); $g++) {
+                if ($games['games'][$g]['id'] == new MongoId($_GET['gid'])) {
+                    $game = $games['games'][$g];
+                }
+            }
         } elseif (isset($_GET['id'])) {
             $event = $eventObject->getEventById($_GET['id'], $_SESSION['user']);
         } elseif (isset($_POST['code']) && $_POST['code'] == 'updateScore') {
             if ($eventObject->getEventById($_POST['id'], $_SESSION['user'])) {
                 $update = $eventObject->updateScoreByIdRoundAndGame($_POST['id'], $_POST['gid'], $_POST['score1'], $_POST['score2']);
+                if ($_POST['round_name'] != "Final"){
+                    // Move winners
+                    moveWinner($_POST['id'], $_POST['gid'], $_POST['round'], $_POST['game'], $_POST['player1'], $_POST['score1'], $_POST['player2'], $_POST['score2']);
+                }
             }
             header("location: admin_event.php?id={$_POST['id']}");
         } else {

@@ -103,4 +103,37 @@
         $_SESSION['user'] = $tempUser;
         $_SESSION['e_id'] = $tempEid;
     }
+
+    function moveWinner($_id, $_gId, $_r, $_g, $_p1, $_s1, $_p2, $_s2) {
+        global $eventObject;
+        $nextGameNumber = null;
+        $nextPosition = null;
+        $nextRound = $_r + 1;
+        if ($_g % 2 == 0) {
+            $nextGameNumber = $_g / 2;
+            $nextPosition = 2;
+        } else {
+            $nextGameNumber = ($_g + 1) / 2;
+            $nextPosition = 1;
+        }
+        if ($_s1 > $_s2) {
+            // winner is player one
+            if ($nextPosition == 2) {
+                $_p2 = $_p1;
+                $_p1 = null;
+            } else {
+                $_p2 = null;
+            }
+            $eventObject->updateWinnerToNextRound($_id, $nextRound, $nextGameNumber, $_p1, $_p2);
+        } elseif ($_s2 > $_s1) {
+            // winner is player two
+            if ($nextPosition == 2) {
+                $_p1 = null;
+            } else {
+                $_p1 = $_p2;
+                $_p2 = null;
+            }
+            $eventObject->updateWinnerToNextRound($_id, $nextRound, $nextGameNumber, $_p1, $_p2);
+        }
+    }
 ?>
