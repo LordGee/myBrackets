@@ -65,7 +65,7 @@
         public function loginUser($_e, $_p) {
             $d = $this->db->users;
             $w = array('email' => $_e, 'pw' => $_p);
-            $s = array('_id');
+            $s = array('_id', 'name');
             $result = $this->readFindOne($d, $w, $s);
             return $result;
         }
@@ -144,14 +144,16 @@
             $this->updateUpdate($d, $w, $u);
         }
 
-        public function updateScoreByIdRoundAndGame($_id, $_gid, $_s1, $_s2) {
+        public function updateScoreByIdRoundAndGame($_id, $_gid, $_p1, $_s1, $_p2, $_s2) {
             $d = $this->db->events;
             $w = array('_id' => new MongoId($_id),
                 'games.id' => new MongoId($_gid));
             $u = array(
                 '$set' => array(
                     'games.$.score1' => (int)$_s1,
-                    'games.$.score2' => (int)$_s2
+                    'games.$.score2' => (int)$_s2,
+                    'games.$.player1' => $_p1,
+                    'games.$.player2' => $_p2
                 )
             );
             $game = $this->updateUpdate($d, $w, $u);

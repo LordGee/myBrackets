@@ -9,6 +9,11 @@
 ?>
 
     <div id="content">
+        <?php if (isset($_SESSION['user'])): ?>
+            <div id="welcome">
+                <span>Welcome <?= $_SESSION['name'] ?></span>
+            </div>
+        <?php endif; ?>
         <h1>myBrackets - Admin Event</h1>
         <div class="contentArea">
             <div class="row">
@@ -16,17 +21,20 @@
                     <h2><?= $game['round_name'] ?> <?= $game['round'] ?> - Game <?= $game['game'] ?></h2>
                     <h3><?= $game['player1'] ?> VS <?= $game['player2'] ?></h3>
                     <form method="post" action="admin_event.php">
-                        <div class="inputItem">
-                            <label for="score1"><?= $game['player1'] ?> : </label>
-                            <input type="hidden" name="player1" value="<?= $game['player1'] ?>">
+                        <div class="inputItem discrete">
+                            <label for="score1"><?= $game['player1'] ?> : <button type="button" onclick="player1edit();">Edit Name</button></label>
+                            <input type="hidden" name="player1" class="player1name" value="<?= $game['player1'] ?>">
+                            <br><br>
                             <div class="inputWrap">
                                 <span class="inputIcon"><i class="fa fa-user fa-fw fa-lg" aria-hidden="true"></i></span>
                                 <input type="number" name="score1" min="0" max="99" step="1" value="<?= $game['score1'] ?>">
                             </div>
                         </div>
-                        <div class="inputItem">
-                            <label for="score2"><?= $game['player2'] ?> : </label>
-                            <input type="hidden" name="player2" value="<?= $game['player2'] ?>">
+                        <br>
+                        <div class="inputItem discrete">
+                            <label for="score2"><?= $game['player2'] ?> : <button type="button" onclick="player2edit();">Edit Name</button></label>
+                            <input type="hidden" name="player2" class="player2name" value="<?= $game['player2'] ?>">
+                            <br><br>
                             <div class="inputWrap">
                                 <span class="inputIcon"><i class="fa fa-user fa-fw fa-lg" aria-hidden="true"></i></span>
                                 <input type="number" name="score2" min="0" max="99" step="1" value="<?= $game['score2'] ?>">
@@ -43,7 +51,7 @@
                             <a href="admin_event.php?id=<?= $_GET['id'] ?>"><button type="button" value="Cancel">Cancel</button></a>
                         </div>
                     </form>
-
+                    <script src="js/editPlayerName.js" type="text/javascript"></script>
                 <?php elseif (isset($_GET['id'])): ?>
                 <h2><?= $event['event_name'] ?></h2>
                 <div class="eventContainer">
@@ -56,15 +64,23 @@
                             <?php $size = $size / 2; ?>
                             <?php for ($g = 0; $g < $size; $g++): ?>
                                 <div class="game-<?= $r + 1 ?>">
-                                    <div class="player">
+                                    <div class="players">
+                                        <div class="player">
                                             <label for="player1"><?= $event['games'][$pos]['player1'] ?></label>
+                                        </div>
+                                        <div class="player">
+                                            <label for="player2"><?= $event['games'][$pos]['player2'] ?></label>
+                                        </div>
+                                    </div>
+                                    <div class="scores">
+                                        <div class="score">
                                             <span><?= $event['games'][$pos]['score1'] ?></span>
+                                        </div>
+                                        <div class="score">
+                                            <span><?= $event['games'][$pos]['score2'] ?></span>
+                                        </div>
                                     </div>
-                                    <div class="player">
-                                        <label for="player2"><?= $event['games'][$pos]['player2'] ?></label>
-                                        <span><?= $event['games'][$pos]['score2'] ?></span>
-                                    </div>
-                                    <div class="playerButton">
+                                    <div class="playerButton discrete">
                                         <form method="GET" action="admin_event.php">
                                             <input type="hidden" name="id" value="<?= $event['_id'] ?>">
                                             <input type="hidden" name="r" value="<?= $event['games'][$pos]['round'] ?>">

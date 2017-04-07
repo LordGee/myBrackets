@@ -11,6 +11,11 @@
 
 
 <div id="content">
+    <?php if (isset($_SESSION['user'])): ?>
+        <div id="welcome">
+            <span>Welcome <?= $_SESSION['name'] ?></span>
+        </div>
+    <?php endif; ?>
     <h1>Create New Event</h1>
     <div class="contentArea">
         <?php if (!isset($_SESSION['e_step']) || $_SESSION['e_step'] == 1): ?>

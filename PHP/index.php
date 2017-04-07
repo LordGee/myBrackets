@@ -2,6 +2,11 @@
 <?php require_once ('include/header.php'); ?>
 
     <div id="content">
+        <?php if (isset($_SESSION['user'])): ?>
+            <div id="welcome">
+                <span>Welcome <?= $_SESSION['name'] ?></span>
+            </div>
+        <?php endif; ?>
         <h1>myBrackets - Home</h1>
         <div class="contentArea">
             <h2>About</h2>
