@@ -25,8 +25,17 @@
                 if ($_POST['round_name'] != "Final"){
                     moveWinner($_POST['id'], $_POST['gid'], $_POST['round'], $_POST['game'], $_POST['player1'], $_POST['score1'], $_POST['player2'], $_POST['score2']);
                 }
+                $eventObject->updateDate($_POST['id']);
             }
             header("location: admin_event.php?id={$_POST['id']}");
+        } elseif (isset($_POST['iCode']) && $_POST['iCode'] == 'admin') {
+            $users = $userObject->getAllUserNames();
+        } elseif (isset($_POST['iCode']) && $_POST['iCode'] == 'addAdmins') {
+            foreach ($_POST['newAdmins'] as $a) {
+                $uId = $userObject->getUserByName($a);
+                $result = $eventObject->updateNewAdmin($_POST['id'], $uId);
+            }
+            $users = $userObject->getAllUserNames();
         } else {
             $events = $eventObject->getAllEventsByUserId($_SESSION['user']);
         }

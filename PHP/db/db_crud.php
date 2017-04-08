@@ -31,6 +31,11 @@
             return $result;
         }
 
+        public function readFindOrdered ($_d, $_w, $_s = null) {
+            $result = $_d->find($_w, $_s)->sort(array("last_update" => -1));
+            return $result;
+        }
+
         public function updateUpdate($_d, $_w, $_u) {
             $_d->findAndModify($_w, $_u);
         }
@@ -42,11 +47,11 @@
             $check = $this->checkIfEmailExists($_e);
             if (!$check) {
                 $d = $this->db->users;
-                $i = array([
+                $i = array(
                     "name" => $_n,
                     "email" => $_e,
                     "pw" => $_p
-                ]);
+                );
                 $this->createInsert($d, $i);
                 return true;
             } else {
@@ -66,6 +71,22 @@
             $d = $this->db->users;
             $w = array('email' => $_e, 'pw' => $_p);
             $s = array('_id', 'name');
+            $result = $this->readFindOne($d, $w, $s);
+            return $result;
+        }
+
+        public function getAllUserNames() {
+            $d = $this->db->users;
+            $w = array();
+            $s = array('name');
+            $result = $this->readFind($d, $w, $s);
+            return $result;
+        }
+
+        public function getUserByName($_n) {
+            $d = $this->db->users;
+            $w = array('name' => $_n);
+            $s = array('_id');
             $result = $this->readFindOne($d, $w, $s);
             return $result;
         }
@@ -92,6 +113,29 @@
             return $i['_id'];
         }
 
+        public function updateNewAdmin($_eID, $_aID) {
+            $d = $this->db->events;
+            $ref = $this->db->createDBRef('users', $_aID);
+            $w = array('_id' => new MongoId($_eID));
+            $u = array('$push' =>
+                array("administrator" => $ref)
+            );
+            $game = $this->updateUpdate($d, $w, $u);
+            return $game;
+        }
+
+        public function updateDate($_id) {
+            $d = $this->db->events;
+            $w = array('_id' => new MongoId($_id));
+            $u = array(
+                '$set' => array(
+                    "last_update" => date("Y-m-d H:i:s")
+                )
+            );
+            $game = $this->updateUpdate($d, $w, $u);
+            return $game;
+        }
+
         public function getEventById($_id, $_u) {
             $d = $this->db->events;
             $w = array('_id' => new MongoId($_id),
@@ -114,6 +158,15 @@
             $w = array('_id' => new MongoId($_id),
                 'games.id' => new MongoId($_gid));
             $result = $this->readFindOne($d, $w);
+            return $result;
+        }
+
+        public function getRecentlyUpdatedEvents() {
+            $d = $this->db->events;
+            $w = array();
+            $s = array('_id', 'event_name', 'event_description', 'bracket_size', 'last_update');
+            $result = $this->readFindOrdered($d, $w, $s);
+            $result->limit(6);
             return $result;
         }
 

@@ -1,5 +1,12 @@
 <?php require_once ('controllers/main_controller.php'); ?>
+<?php require_once ('controllers/index_controller.php'); ?>
 <?php require_once ('include/header.php'); ?>
+
+<?php
+//echo '<pre>';
+//var_dump($events);
+//echo '</pre>';
+?>
 
     <div id="content">
         <?php if (isset($_SESSION['user'])): ?>
@@ -20,41 +27,19 @@
         <div class="contentArea">
             <h2>Recently update events</h2>
             <div class="row">
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <h3>Name of Event</h3>
-                <p>Description of the event which could be very long or it could be short however this is up to the administrator who is running the event...</p>
-                <br/>
-                <h6>Player (1) Vs Player (3)</h6>
-                <p>Bracket Size = 8 | Start Date = 24/02/2017</p>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <h3>Name of Event</h3>
-                <p>Description of the event which could be very long or it could be short however this is up to the administrator who is running the event...</p>
-                <br/>
-                <h6>Player (1) Vs Player (3)</h6>
-                <p>Bracket Size = 8 | Start Date = 24/02/2017</p>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <h3>Name of Event</h3>
-                <p>Description of the event which could be very long or it could be short however this is up to the administrator who is running the event...</p>
-                <br/>
-                <h6>Player (1) Vs Player (3)</h6>
-                <p>Bracket Size = 8 | Start Date = 24/02/2017</p>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <h3>Name of Event</h3>
-                <p>Description of the event which could be very long or it could be short however this is up to the administrator who is running the event...</p>
-                <br/>
-                <h6>Player (1) Vs Player (3)</h6>
-                <p>Bracket Size = 8 | Start Date = 24/02/2017</p>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <h3>Name of Event</h3>
-                <p>Description of the event which could be very long or it could be short however this is up to the administrator who is running the event...</p>
-                <br/>
-                <h6>Player (1) Vs Player (3)</h6>
-                <p>Bracket Size = 8 | Start Date = 24/02/2017</p>
-            </div>
+                <?php foreach ($events as $event): ?>
+                    <div class="col-sm-12 col-md-6 col-lg-4 border">
+                        <div class="recEvent">
+                            <h3><?= $event['event_name'] ?></h3>
+                            <?php $subD = substr($event['event_description'], 0, 100); ?>
+                            <i>"<?= $subD ?>..."</i>
+                            <p>Bracket Size = <?= $event['bracket_size'] ?> <br>Last Updated :<br><?= date("jS F Y - G:i", strtotime($event['last_update'])) ?></p>
+                        </div>
+                        <div class="gotoEvent">
+                            <a href="event.php?eid=<?= $event['_id'] ?>"><button>Go To Event</button></a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
 

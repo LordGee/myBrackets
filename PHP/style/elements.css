@@ -44,7 +44,7 @@ h6 {
     font-weight: 200;
 }
 
-p, li, a, span, td {
+p, li, a, span, td, i {
     font-family: 'Muli', sans-serif;
     font-size: 16px;
 }
@@ -79,7 +79,7 @@ form {
     display: table;
 }
 
-input[type=email], input[type=password], input[type=text], input[type=number], textarea {
+input[type=email], input[type=password], input[type=text], input[type=number], textarea, .select2User {
     padding: 12px;
     width: 100%;
     border-bottom-right-radius: 5px;
@@ -89,6 +89,7 @@ input[type=email], input[type=password], input[type=text], input[type=number], t
     border: 2px grey solid;
     display: block;
 }
+
 
 input[type=submit], button, .button {
     background-color: white;
@@ -149,3 +150,32 @@ td {
     border-radius: 2px;
 }
 
+.recEvent {
+    height: 250px;
+}
+
+.gotoEvent {
+    text-align: center;
+}
+
+.gotoEvent button{
+    width: 90%;
+}
+
+.border {
+    outline: ridge 3px lightgrey;
+    outline-offset: -5px;
+    border-radius: 5px;
+}
+
+.profilePic {
+    max-width: 100%;
+    text-align: center;
+}
+
+.profileHeading {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
+}

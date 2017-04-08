@@ -20,6 +20,7 @@
                         $_SESSION['name'] = $user['name'];
                     }
                     $message = "Well Done, you have successfully registered";
+                    header("location: index.php");
                 } else {
                     $error = "Your email address is already registered with us";
                 }

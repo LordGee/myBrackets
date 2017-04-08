@@ -122,6 +122,10 @@
     .col-push-md-10{left:83.3333333333%}
     .col-push-md-11{left:91.6666666667%}
     .col-push-md-12{left:100%}
+
+    .profileHeading {
+        margin-top: 10%;
+    }
 }
 
 @media only screen and (min-width: 1366px) {

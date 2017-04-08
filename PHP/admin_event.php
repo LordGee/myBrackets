@@ -4,7 +4,10 @@
 
 <?php
 //echo '<pre>';
-//var_dump($game);
+//foreach ($users as $u) {
+//    var_dump($u);
+//}
+//var_dump($users);
 //echo '</pre>';
 ?>
 
@@ -14,7 +17,7 @@
                 <span>Welcome <?= $_SESSION['name'] ?></span>
             </div>
         <?php endif; ?>
-        <h1>myBrackets - Admin Event</h1>
+        <h1>Admin Event</h1>
         <div class="contentArea">
             <div class="row">
                 <?php if (isset($_GET['r']) && isset($_GET['g'])): ?>
@@ -52,8 +55,44 @@
                         </div>
                     </form>
                     <script src="js/editPlayerName.js" type="text/javascript"></script>
+                <?php elseif (isset($_POST['iCode']) && $_POST['iCode'] == 'admin' || $_POST['iCode'] == 'addAdmins'): ?>
+                    <h2><?= $_POST['event'] ?></h2>
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-offset-lg-2 col-offset-md-2">
+                            <h2>Current Administrators</h2>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-offset-lg-2 col-offset-md-2">
+                            <h4>Add Administrators to This Event</h4>
+                            <form method="post" action="admin_event.php">
+                                <label>Select Users Name</label>
+                                <br>
+                                <select name="newAdmins[]" class="select2User" multiple="multiple">
+                                    <?php foreach ($users as $user): ?>
+                                        <option value="<?= $user['name'] ?>"><?= $user['name'] ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                                <br><br>
+                                <input type="hidden" name="iCode" value="addAdmins">
+                                <input type="hidden" name="id" value="<?= $_POST['id'] ?>">
+                                <input type="submit" value="Add Admins">
+                            </form>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(".select2User").select2();
+                    </script>
                 <?php elseif (isset($_GET['id'])): ?>
-                <h2><?= $event['event_name'] ?></h2>
+                <h2><?= $event['event_name'] ?>
+                    <form method="post" action="admin_event.php">
+                        <input type="hidden" name="iCode" value="admin">
+                        <input type="hidden" name="event" value="<?= $event['event_name'] ?>">
+                        <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
+                        <input type="submit" value="Add Admins">
+                    </form>
+                </h2>
                 <div class="eventContainer">
                     <?php $size = $event['bracket_size']; ?>
                     <?php $pos = 0; ?>
@@ -80,6 +119,7 @@
                                             <span><?= $event['games'][$pos]['score2'] ?></span>
                                         </div>
                                     </div>
+                                    <?php if ($event['games'][$pos]['player1'] != null && $event['games'][$pos]['player2'] != null): ?>
                                     <div class="playerButton discrete">
                                         <form method="GET" action="admin_event.php">
                                             <input type="hidden" name="id" value="<?= $event['_id'] ?>">
@@ -89,6 +129,7 @@
                                             <button type="submit" ><i class="fa fa-pencil-square-o " aria-hidden="true"></i> Edit</button>
                                         </form>
                                     </div>
+                                    <?php endif; ?>
                                 </div>
                                 <?php $pos++; ?>
                             <?php endfor; ?>
