@@ -8,10 +8,10 @@ if (!isset($message)) {
     $message = "";
 }
 
-    if (isset($_SESSION['user'])) {
-        $admin = $eventObject->getAllEventsByUserId($_SESSION['user']);
+    if (isset($_GET['search']) && $_GET['search'] != "") {
+        $result = $eventObject->getAllEventsForSearch($_GET['search']);
     } else {
-        header("location: index.php");
+
     }
 
 ?>

@@ -145,6 +145,14 @@
             return $result;
         }
 
+        public function getEventByEventId($_id) {
+            $d = $this->db->events;
+            $w = array('_id' => new MongoId($_id));
+            $s = array();
+            $result = $this->readFindOne($d, $w, $s);
+            return $result;
+        }
+
         public function getAllEventsByUserId($_u) {
             $d = $this->db->events;
             $w = array('administrator' => array('$elemMatch' => ['$id' => new MongoId($_u)]));
@@ -236,6 +244,13 @@
             return $game;
         }
 
+        public function getAllEventsForSearch($_val) {
+            $d = $this->db->events;
+            $v = "/" . $_val . "/i";
+            $w = array('event_name' => array('$regex' => new MongoRegex($v)));
+            $result = $this->readFind($d, $w);
+            return $result;
+        }
     }
 
 ?>

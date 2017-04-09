@@ -12,11 +12,7 @@
 ?>
 
     <div id="content">
-        <?php if (isset($_SESSION['user'])): ?>
-            <div id="welcome">
-                <span>Welcome <?= $_SESSION['name'] ?></span>
-            </div>
-        <?php endif; ?>
+        <?php require_once ('include/welcome.php'); ?>
         <h1>Admin Event</h1>
         <div class="contentArea">
             <div class="row">

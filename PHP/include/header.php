@@ -21,7 +21,8 @@
             <?php if (isset($_SESSION['user'])): ?>
                 <a class="navLink" href="create.php">Create<i class="fa fa-plus navIcon" aria-hidden="true"></i></a>
                 <a class="navLink" href="admin_event.php">Manage<i class="fa fa-pencil-square-o navIcon" aria-hidden="true"></i></a>
-                <a class="navLink" href="event.php">Event Test<i class="fa fa-bars fa-spin navIcon" aria-hidden="true"></i></a>
+                <a class="navLink" href="search.php">Search<i class="fa fa-search navIcon" aria-hidden="true"></i></a>
+                <a class="navLink" href="profile.php">Profile<i class="fa fa-user navIcon" aria-hidden="true"></i></a>
                 <a class="navLink" href="signout.php">Logout<i class="fa fa-sign-out navIcon" aria-hidden="true"></i></a>
             <?php else: ?>
                 <a class="navLink" href="signin.php">Login<i class="fa fa-sign-in navIcon" aria-hidden="true"></i></a>

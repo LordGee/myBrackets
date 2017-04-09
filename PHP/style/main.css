@@ -125,3 +125,32 @@ a.navLink {
     float: right;
     right: 5px;
 }
+
+.searchBox {
+    width: 320px;
+    background: RGBA(0,0,0,0.75);
+    position: fixed;
+    right: -320px;
+    border-bottom-left-radius: 5px;
+    top: 200px;
+    transition: right ease .4s;
+}
+
+.searchBoxShow {
+    right: 0;
+    transition: right ease .4s;
+}
+
+.searchBox form {
+    display: flex;
+    margin: 10px;
+}
+
+.searchBox input[type=text] {
+    width: 250px;
+}
+
+.searchBox button {
+    float: left;
+    color: white;
+}

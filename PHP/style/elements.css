@@ -150,32 +150,3 @@ td {
     border-radius: 2px;
 }
 
-.recEvent {
-    height: 250px;
-}
-
-.gotoEvent {
-    text-align: center;
-}
-
-.gotoEvent button{
-    width: 90%;
-}
-
-.border {
-    outline: ridge 3px lightgrey;
-    outline-offset: -5px;
-    border-radius: 5px;
-}
-
-.profilePic {
-    max-width: 100%;
-    text-align: center;
-}
-
-.profileHeading {
-    text-align: center;
-    vertical-align: middle;
-    margin-top: auto;
-    margin-bottom: auto;
-}

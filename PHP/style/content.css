@@ -88,7 +88,7 @@
 }
 
 [class*="game-"] {
-    background-color: lightblue;
+    background-color: rgba(255, 252, 225, 0.8);
     border: 1px black solid;
     border-radius: 2px;
     width: auto;
@@ -96,44 +96,46 @@
     text-align: left;
 }
 
+/* First position = 44 * {No. Round one game} - 22 */
+
 .game-1 {
-    margin-top: 1%;
+    margin-top: 4px;
 }
 
 .game-1:first-of-type {
-    margin-top: 0%;
+    margin-top: 0;
 }
 
 .game-2 {
-    margin-top: 14%;
+    margin-top: 48px;
 }
 
 .game-2:first-of-type {
-    margin-top: 7%;
+    margin-top: 22px;
 }
 
 .game-3 {
-    margin-top: 42%;
+    margin-top: 136px;
 }
 
 .game-3:first-of-type {
-    margin-top: 21%;
+    margin-top: 66px;
 }
 
 .game-4 {
-    margin-top: 98%;
+    margin-top: 312px;
 }
 
 .game-4:first-of-type {
-    margin-top: 49%;
+    margin-top: 154px;
 }
 
 .game-5 {
-    margin-top: 205%;
+    margin-top: 660px;
 }
 
 .game-5:first-of-type {
-    margin-top: 105%;
+    margin-top: 330px;
 }
 
 .bracket {
@@ -154,6 +156,7 @@
 
 .scores {
     display: inline-block;
+    margin-right: 10px;
 }
 
 .score span {
@@ -172,4 +175,60 @@
     height: auto;
 }
 
+.recEvent {
+    height: 250px;
+}
 
+.gotoEvent {
+    text-align: center;
+}
+
+.gotoEvent button{
+    width: 90%;
+}
+
+.border {
+    outline: ridge 3px lightgrey;
+    outline-offset: -5px;
+    border-radius: 5px;
+}
+
+.profilePic {
+    max-width: 100%;
+    text-align: center;
+}
+
+.profileHeading {
+    text-align: center;
+    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#welcomeMessage {
+    float: left;
+}
+
+#welcomeSearch {
+    float: right;
+}
+
+#welcome button {
+    height: auto;
+    background-color: transparent;
+    border: none;
+}
+
+.won {
+    font-weight: bolder;
+    color: darkblue;
+}
+
+.lost {
+    font-weight: 100;
+    color: lightgrey;
+}
+
+.scoreWon {
+    font-weight: bolder;
+}
