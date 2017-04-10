@@ -10,4 +10,7 @@
             </form>
         </div>
     </div>
+    <br><br>
+    <span class="message"><?= $message ?></span>
+    <span class="error"><?= $error ?></span>
 <?php endif; ?>

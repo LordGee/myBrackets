@@ -152,4 +152,47 @@
             $eventObject->updateWinnerToNextRound($_id, $nextGameId, $_p1, $_p2);
         }
     }
+
+    function uploadPicture()
+    {
+        $target_dir = "profile/";
+        $target_file = $target_dir . basename($_FILES["picture"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+        if (isset($_POST["picture"])) {
+            $check = getimagesize($_FILES["picture"]["tmp_name"]);
+            if ($check !== false) {
+                echo "File is an image - " . $check["mime"] . ".";
+                $uploadOk = 1;
+            } else {
+                echo "File is not an image.";
+                $uploadOk = 0;
+            }
+        }
+        if (file_exists($target_file)) {
+            echo "Sorry, file already exists.";
+            $uploadOk = 0;
+        }
+        if ($_FILES["picture"]["size"] > 20000000) {
+            echo "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+            && $imageFileType != "gif" && $imageFileType != "JPG" && $imageFileType != "PNG" && $imageFileType != "JPEG"
+            && $imageFileType != "GIF"
+        ) {
+            echo "Sorry, only specific image files are allowed.";
+            $uploadOk = 0;
+        }
+        if ($uploadOk == 0) {
+            echo "Sorry, your file was not uploaded.";
+        } else {
+            if (move_uploaded_file($_FILES["picture"]["tmp_name"], "" . $target_file)) {
+                // echo "Your file " . basename($_FILES["picture"]["name"]) . " has been uploaded.";
+                return $target_file;
+            } else {
+                echo "Sorry, there was an error uploading your file.";
+            }
+        }
+    }
 ?>

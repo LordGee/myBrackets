@@ -12,10 +12,25 @@
         <?php require_once ('include/welcome.php'); ?>
         <h1>myBrackets - Home</h1>
         <div class="contentArea">
-            <h2>About</h2>
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <p>Blah Blah Blah</p>
+                    <h2>About</h2>
+                    <p>Many sports clubs around the world, organise tournament events. These tournaments ensure members
+                        or participants, get the opportunity to play at a competitive level. This type of activity,
+                        provides the players with a sense of achievement and encourages people to better themselves
+                        within the sport. The majority of sports activities, provide a variety of events for their
+                        members, such as elimination brackets, leader-boards or round-robins.</p>
+                    <p>The problem, is that many organisations or venues, still present this information using
+                        traditional methods, such as pen and paper or use spreadsheets to show current standings.
+                        These methods can be very time consuming and provide an element of risk, for example, the piece
+                        of paper could be lost or destroyed, or the spreadsheet file could become corrupt or get
+                        deleted.</p>
+                    <p>The solution I propose, is to create a web application, that will allow a user to create a
+                        tournament bracket, that can be used by any age group, regardless of technical experience.
+                        This should include clear and selective options, that allow for easy manipulation of an event.
+                        Participants will be able to select and view desired events and historical achievements, via a
+                        profile portal. The solution should be generic, enabling deployment into any custom website,
+                        or independent operation, such as a standalone web application.</p>
                 </div>
             </div>
         </div>

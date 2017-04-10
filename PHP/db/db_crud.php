@@ -91,6 +91,29 @@
             return $result;
         }
 
+        public function getUserById($_id) {
+            $d = $this->db->users;
+            $w = array('_id' => new MongoId($_id));
+            $s = array();
+            $result = $this->readFindOne($d, $w, $s);
+            return $result;
+        }
+
+        public function updateUserProfile($_id, $_n, $_e, $_p, $_pw) {
+            $d = $this->db->users;
+            $w = array('_id' => new MongoId($_id));
+            $u = array(
+                '$set' => array(
+                    'name' => $_n,
+                    'email' => $_e,
+                    'picture' => $_p,
+                    'pw' => $_pw
+                )
+            );
+            $result = $this->updateUpdate($d, $w, $u);
+            return $result;
+        }
+
     }
 
     class Events extends CRUD {

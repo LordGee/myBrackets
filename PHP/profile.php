@@ -8,16 +8,48 @@
         <div class="contentArea">
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-12 discrete">
-                    <h2 class="profileHeading"><?= $_SESSION['name'] ?></h2>
+                    <h2 class="profileHeading">Name : <?= $user['name'] ?></h2>
+                    <p class="profileHeading">Email : <?= $user['email'] ?></p>
                     <br>
                     <form class="centerText" method="post" action="profile.php">
+                        <input type="hidden" name="iCode" value="edit">
                         <input type="submit" value="Edit Profile">
                     </form>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 centerText">
-                    <img src="profile/GF.jpg" class="profilePic">
+                    <?php if ($user['picture'] != null): ?>
+                        <img src="<?= $user['picture'] ?>" class="profilePic">
+                    <?php else: ?>
+                        <i class="fa fa-user fa-5x profilePic"></i>
+                    <?php endif; ?>
                 </div>
             </div>
+            <?php if (isset($_POST['iCode']) && $_POST['iCode'] == 'edit'): ?>
+                <div class="row">
+                    <div class="col-lg-6 col-offset-lg-3 col-md-8 col-offset-md-2 col-sm-12">
+                        <form method="post" action="profile.php" enctype="multipart/form-data">
+                            <h2>Edit your profile</h2>
+                            <br>
+                            <label for="name">Profile Name : </label>
+                            <input type="text" id="name" name="name" value="<?= $user['name'] ?>">
+                            <br><br>
+                            <label for="email">Email Address : </label>
+                            <input type="email" id="email" name="email" value="<?= $user['email'] ?>">
+                            <br><br>
+                            <label for="picture">Change Profile Picture : </label>
+                            <input type="hidden" name="currentPic" value="<?= $user['picture'] ?>">
+                            <input type="file" id="picture" name="picture" class="button">
+                            <br><br>
+                            <label for="password">Enter your password to save changes : </label>
+                            <input type="password" id="password" name="pw">
+                            <br><br><br>
+                            <input type="hidden" name="id" value="<?= $_SESSION['user'] ?>">
+                            <input type="hidden" name="iCode" value="saveProfile">
+                            <input type="submit" value="Save Profile">
+                        </form>
+                    </div>
+                </div>
+            <?php endif; ?>
             <div class="row">
                 <div class="col-lg-6 col-offset-lg-3 col-md-8 col-offset-md-2 col-sm-12">
                     <h2>Events You Participate</h2>
