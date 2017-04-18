@@ -232,3 +232,7 @@
 .scoreWon {
     font-weight: bolder;
 }
+
+.player label {
+    font-size: 16px;
+}
