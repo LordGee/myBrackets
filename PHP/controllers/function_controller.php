@@ -16,48 +16,30 @@
     }
 
     function bracketSizeRequire($_n) {
-        if ($_n < 2) {
-            return 0;
-        } elseif ($_n == 2) {
-            return 2;
-        } elseif ($_n > 2 && $_n <= 4) {
-            return 4;
-        } elseif ($_n > 4 && $_n <= 8) {
-            return 8;
-        } elseif ($_n > 8 && $_n <= 16) {
-            return 16;
-        } elseif ($_n > 16 && $_n <= 32) {
-            return 32;
-        } elseif ($_n > 32 && $_n <= 64) {
-            return 64;
-        } elseif ($_n > 64 && $_n <= 128) {
-            return 128;
-        } else {
-            return 0;
-        }
+        if ($_n < 2) { return 0; }
+        elseif ($_n == 2) { return 2; }
+        elseif ($_n > 2 && $_n <= 4) { return 4; }
+        elseif ($_n > 4 && $_n <= 8) { return 8; }
+        elseif ($_n > 8 && $_n <= 16) { return 16; }
+        elseif ($_n > 16 && $_n <= 32) { return 32; }
+        elseif ($_n > 32 && $_n <= 64) { return 64; }
+        elseif ($_n > 64 && $_n <= 128) { return 128; }
+        else { return 0; }
     }
 
     function howManyRounds($_s) {
-        if ($_s == 2) {
-            return 1;
-        } elseif ($_s == 4) {
-            return 2;
-        } elseif ($_s == 8) {
-            return 3;
-        } elseif ($_s == 16) {
-            return 4;
-        } elseif ($_s == 32) {
-            return 5;
-        } elseif ($_s == 64) {
-            return 6;
-        } elseif ($_s == 128) {
-            return 7;
-        } else {
-            return 0;
-        }
+        if ($_s == 2) { return 1; }
+        elseif ($_s == 4) { return 2; }
+        elseif ($_s == 8) { return 3; }
+        elseif ($_s == 16) { return 4; }
+        elseif ($_s == 32) { return 5; }
+        elseif ($_s == 64) { return 6; }
+        elseif ($_s == 128) { return 7; }
+        else { return 0; }
     }
 
     function changePlayerOrder($_o, $_n) {
+        $ordered = [];
         for ($i = 0; $i < count($_o); $i++) {
                 $temp = $_n[$_o[$i]];
                 $ordered[$i] = $temp;
@@ -66,6 +48,7 @@
     }
 
     function changeEmailOrder($_o, $_e) {
+        $ordered = [];
         for ($i = 0; $i < count($_o); $i++) {
                 $temp = $_e[$_o[$i]];
                 $ordered[$i] = $temp;

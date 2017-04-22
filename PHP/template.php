@@ -7,6 +7,7 @@
         <div class="contentArea">
             <div class="row">
 
+                <!-- CONTENT GOES HERE -->
 
             </div>
         </div>

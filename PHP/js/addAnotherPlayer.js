@@ -21,6 +21,5 @@ $(document).ready(function(){
 
     $("#removePlayer").click(function(){
         $('.remove:last').remove();
-        // $("html, body").animate({ scrollTop: $(document).height() }, "slow");
     });
 });

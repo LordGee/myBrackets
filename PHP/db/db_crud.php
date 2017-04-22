@@ -118,7 +118,7 @@
 
     class Events extends CRUD {
 
-        function createNewEvent($_name, $_description, $_players, $_size, $_rounds, $_admin) {
+        public function createNewEvent($_name, $_description, $_players, $_size, $_rounds, $_admin) {
             $d = $this->db->events;
             $ref = $this->db->createDBRef('users', $_admin);
             $i = array(

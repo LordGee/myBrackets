@@ -1,13 +1,11 @@
 <?php
     require_once ('controllers/function_controller.php');
-
     if (!isset($error)) {
         $error = "";
     }
     if (!isset($message)) {
         $message = "";
     }
-
     if (isset($_SESSION['user'])) {
         if (isset($_GET['r']) && isset($_GET['g'])) {
             $games = $eventObject->getGameByIdRoundAndGame($_GET['id'], $_GET['gid']);
@@ -42,5 +40,4 @@
     } else {
         header("location: index.php");
     }
-
 ?>

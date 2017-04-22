@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    // http://jsfiddle.net/MtjUt/
     var selectBoxes = document.getElementsByClassName('select');
     var disableOtherBoxes = function () {
         'use strict';
@@ -30,7 +29,6 @@ $(document).ready(function() {
             $('#genMessage').text("Select All Players");
             $('#gen').attr('disabled','disabled');
         }
-
     };
     for (var i = 0; i < selectBoxes.length; i++) {
         selectBoxes[i].addEventListener('change', function () {
