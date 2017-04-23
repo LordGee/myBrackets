@@ -12,7 +12,7 @@ if (!isset($message)) {
         if (isset($_POST['iCode']) && $_POST['iCode'] == 'saveProfile') {
             $encryptPw = encryptPassword($_SESSION['email'], $_POST['pw']);
             $checkPassword = $userObject->loginUser($_SESSION['email'], $encryptPw);
-            if ($checkPassword) {
+            if ($checkPassword && $_POST['email'] != "") {
                 $picture = '';
                 if ($_FILES['picture']['error'] != UPLOAD_ERR_NO_FILE) {
                     $picture = uploadPicture();
@@ -25,7 +25,7 @@ if (!isset($message)) {
                     $message = "Profile Updated";
                 }
             } else {
-                $error = "Incorrect Password Entered - Please try again";
+                $error = "Incorrect Password or Email Address Invalid  - Please try again";
             }
         }
         $user = $userObject->getUserById($_SESSION['user']);

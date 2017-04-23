@@ -31,10 +31,10 @@
                             <h2>Edit your profile</h2>
                             <br>
                             <label for="name">Profile Name : </label>
-                            <input type="text" id="name" name="name" value="<?= $user['name'] ?>">
+                            <input type="text" id="name" name="name" value="<?= $user['name'] ?>" required>
                             <br><br>
                             <label for="email">Email Address : </label>
-                            <input type="email" id="email" name="email" value="<?= $user['email'] ?>">
+                            <input type="email" id="email" name="email" value="<?= $user['email'] ?>" required>
                             <br><br>
                             <label for="picture">Change Profile Picture : </label>
                             <input type="hidden" name="currentPic" value="<?= $user['picture'] ?>">

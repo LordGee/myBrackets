@@ -80,10 +80,12 @@
 
     function cleanUp() {
         $tempUser = $_SESSION['user'];
+        $tempName = $_SESSION['name'];
         $tempEid = $_SESSION['e_id'];
         session_destroy();
         session_start();
         $_SESSION['user'] = $tempUser;
+        $_SESSION['name'] = $tempName;
         $_SESSION['e_id'] = $tempEid;
     }
 

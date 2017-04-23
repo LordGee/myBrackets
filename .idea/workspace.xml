@@ -3,16 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="eb290597-919c-4510-ac90-dfcf1b58da84" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/controllers/admin_event_controller.php" afterPath="$PROJECT_DIR$/PHP/controllers/admin_event_controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/controllers/create_controller.php" afterPath="$PROJECT_DIR$/PHP/controllers/create_controller.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/controllers/function_controller.php" afterPath="$PROJECT_DIR$/PHP/controllers/function_controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/controllers/main_controller.php" afterPath="$PROJECT_DIR$/PHP/controllers/main_controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/controllers/user_controller.php" afterPath="$PROJECT_DIR$/PHP/controllers/user_controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/db/db_connect.php" afterPath="$PROJECT_DIR$/PHP/db/db_connect.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/db/db_crud.php" afterPath="$PROJECT_DIR$/PHP/db/db_crud.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/js/addAnotherPlayer.js" afterPath="$PROJECT_DIR$/PHP/js/addAnotherPlayer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/js/manageMultipleIdenticalComboBoxes.js" afterPath="$PROJECT_DIR$/PHP/js/manageMultipleIdenticalComboBoxes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/template.php" afterPath="$PROJECT_DIR$/PHP/template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/controllers/profile_controller.php" afterPath="$PROJECT_DIR$/PHP/controllers/profile_controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PHP/profile.php" afterPath="$PROJECT_DIR$/PHP/profile.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/PHP/controllers/index_controller.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -53,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/PHP/controllers/user_controller.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1000">
-              <caret line="40" column="2" lean-forward="true" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
+              <caret line="40" column="2" lean-forward="false" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -69,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_event.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin_event.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/admin_event.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="78" column="26" lean-forward="true" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
+            <state relative-caret-position="1825">
+              <caret line="78" column="26" lean-forward="false" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -82,18 +75,8 @@
       <file leaf-file-name="db_crud.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/db/db_crud.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1945">
-              <caret line="245" column="0" lean-forward="true" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view_event_controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/controllers/view_event_controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="63" lean-forward="true" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+            <state relative-caret-position="6125">
+              <caret line="245" column="0" lean-forward="false" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/PHP/controllers/admin_event_controller.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1050">
-              <caret line="42" column="2" lean-forward="true" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
+              <caret line="42" column="2" lean-forward="false" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -113,17 +96,7 @@
         <entry file="file://$PROJECT_DIR$/PHP/controllers/create_controller.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1000">
-              <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/controllers/main_controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="39" lean-forward="false" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+              <caret line="40" column="1" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -132,8 +105,28 @@
       <file leaf-file-name="function_controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PHP/controllers/function_controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2025">
-              <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+            <state relative-caret-position="995">
+              <caret line="87" column="38" lean-forward="false" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile_controller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PHP/controllers/profile_controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="27" column="70" lean-forward="false" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PHP/profile.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="800">
+              <caret line="32" column="69" lean-forward="true" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -189,8 +182,6 @@
         <option value="$PROJECT_DIR$/PHP/include/header.php" />
         <option value="$PROJECT_DIR$/PHP/style/elements.css" />
         <option value="$PROJECT_DIR$/PHP/index.php" />
-        <option value="$PROJECT_DIR$/PHP/profile.php" />
-        <option value="$PROJECT_DIR$/PHP/controllers/profile_controller.php" />
         <option value="$PROJECT_DIR$/PHP/style/content.css" />
         <option value="$PROJECT_DIR$/PHP/db/db_connect.php" />
         <option value="$PROJECT_DIR$/PHP/db/db_crud.php" />
@@ -201,8 +192,10 @@
         <option value="$PROJECT_DIR$/PHP/js/manageMultipleIdenticalComboBoxes.js" />
         <option value="$PROJECT_DIR$/PHP/controllers/user_controller.php" />
         <option value="$PROJECT_DIR$/PHP/controllers/create_controller.php" />
-        <option value="$PROJECT_DIR$/PHP/controllers/function_controller.php" />
         <option value="$PROJECT_DIR$/PHP/controllers/admin_event_controller.php" />
+        <option value="$PROJECT_DIR$/PHP/controllers/function_controller.php" />
+        <option value="$PROJECT_DIR$/PHP/controllers/profile_controller.php" />
+        <option value="$PROJECT_DIR$/PHP/profile.php" />
       </list>
     </option>
   </component>
@@ -259,6 +252,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -413,7 +407,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -550,11 +543,13 @@
       <workItem from="1492706163187" duration="2157000" />
       <workItem from="1492774668486" duration="7681000" />
       <workItem from="1492848556450" duration="12472000" />
+      <workItem from="1492951135379" duration="82000" />
+      <workItem from="1492962824812" duration="169000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258795000" />
+    <option name="totallyTimeSpent" value="259046000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -746,14 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="43" column="75" lean-forward="false" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP/style/content.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7080">
@@ -835,7 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -843,7 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="800">
           <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -851,7 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="23" column="7" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -859,15 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
           <caret line="38" column="3" lean-forward="false" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/controllers/profile_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -882,7 +857,7 @@
     <entry file="file://$PROJECT_DIR$/PHP/controllers/view_event_controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="11" column="63" lean-forward="true" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+          <caret line="11" column="63" lean-forward="false" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
           <folding />
         </state>
       </provider>
@@ -898,23 +873,7 @@
     <entry file="file://$PROJECT_DIR$/PHP/controllers/index_controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/controllers/user_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="40" column="2" lean-forward="true" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/controllers/create_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -922,23 +881,15 @@
     <entry file="file://$PROJECT_DIR$/PHP/controllers/admin_event_controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1050">
-          <caret line="42" column="2" lean-forward="true" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
+          <caret line="42" column="2" lean-forward="false" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PHP/db/db_crud.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1945">
-          <caret line="245" column="0" lean-forward="true" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/controllers/function_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+        <state relative-caret-position="6125">
+          <caret line="245" column="0" lean-forward="false" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -953,8 +904,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PHP/admin_event.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="78" column="26" lean-forward="true" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
+        <state relative-caret-position="1825">
+          <caret line="78" column="26" lean-forward="false" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/controllers/user_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="40" column="2" lean-forward="false" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/controllers/create_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="40" column="1" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/controllers/function_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="995">
+          <caret line="87" column="38" lean-forward="false" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/controllers/profile_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="27" column="70" lean-forward="false" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="32" column="69" lean-forward="true" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
           <folding />
         </state>
       </provider>
